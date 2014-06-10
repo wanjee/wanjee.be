@@ -21,3 +21,8 @@ License
 -------
 
 This work is under the MIT license. 
+
+Why "Shuwee" ?
+--------------
+
+Shuwee name comes from a Lakota word : čhuwí.  It's defined as the upper back of the body.
