@@ -11,6 +11,7 @@ Features will include:
 - And much more
 
 **Warning:** This is still a total work in progress.  This is not yet supposed to be used in real world.
+**Warning:** This repository is a development helper for me, see submodules.
 
 Documentation
 -------------
