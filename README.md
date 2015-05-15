@@ -10,13 +10,12 @@ Features will include:
 - REST API
 - And much more
 
-**Warning:** This is still a total work in progress.  This is not yet supposed to be used in real world.
-**Warning:** This repository is a development helper for me, see submodules.
+This is my playground for the development of Shuwee bundles.  This repository nothing more than a working demonstration of all Shuwee bundles. 
 
 Documentation
 -------------
 
-The bulk of the documentation will be stored in the `Resources/doc/index.md`
+See documentation of all bundles separately.
 
 License
 -------
