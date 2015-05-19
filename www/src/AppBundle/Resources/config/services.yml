@@ -1,0 +1,12 @@
+services:
+    appbundle.post_admin:
+        class: AppBundle\Admin\PostAdmin
+        parent: shuwee_admin.admin_abstract
+        tags:
+          -  { name: shuwee.admin, alias: post }
+
+    appbundle.comment_admin:
+        class: AppBundle\Admin\CommentAdmin
+        parent: shuwee_admin.admin_abstract
+        tags:
+          -  { name: shuwee.admin, alias: comment }
