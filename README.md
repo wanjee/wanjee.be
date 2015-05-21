@@ -17,6 +17,21 @@ Documentation
 
 See documentation of all bundles separately.
 
+How to install this demo
+------------------------
+
+- Checkout
+- $ composer install
+- $ bin/console doctrine:schema:update --force 
+- $ bin/console cache:clear --env=prod 
+- $ bin/console assets:install --symlink
+- $ bin/console assetic:dump --env=prod
+- $ bin/console doctrine:fixtures:load
+- $ bin/console shuwee:admin:user:add --roles=ROLE_ADMIN
+- Connect to http://your.domain.dev/admin
+
+
+
 License
 -------
 
