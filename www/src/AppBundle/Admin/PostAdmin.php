@@ -31,23 +31,42 @@ class PostAdmin extends Admin
         $datagrid = new Datagrid($this);
 
         $datagrid
-          ->addField('id', 'text', array(
-              'label' => '#',
+            ->addField(
+                'id',
+                'text',
+                array(
+                    'label' => '#',
+                )
             )
-          )
-          ->addField('title', 'text', array(
-              'label' => 'Title',
+            ->addField(
+                'title',
+                'text',
+                array(
+                    'label' => 'Title',
+                )
             )
-          )
-          ->addField('authorEmail', 'text', array(
-              'label' => 'Author',
+            ->addField(
+                'authorEmail',
+                'text',
+                array(
+                    'label' => 'Author',
+                )
             )
-          )
-          ->addField('publishedAt', 'date', array(
-              'label' => 'Published',
-              'date_format' => 'F j, Y',
+            ->addField(
+                'publishedAt',
+                'date',
+                array(
+                    'label' => 'Published',
+                    'date_format' => 'F j, Y',
+                )
             )
-          );
+            ->addField(
+                'status',
+                'boolean',
+                array(
+                    'label' => 'Published'
+                )
+            );
 
         return $datagrid;
     }

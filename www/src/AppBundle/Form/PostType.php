@@ -14,21 +14,36 @@ class PostType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
-     * @param array                $options
+     * @param array $options
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('title')
             ->add('summary', 'textarea')
-            ->add('content', 'textarea', array(
-                'attr' => array('rows' => 20),
-            ))
+            ->add(
+                'content',
+                'textarea',
+                array(
+                    'attr' => array('rows' => 20),
+                )
+            )
             ->add('authorEmail', 'email')
-            ->add('publishedAt', 'datetime', array(
-                'widget' => 'single_text',
-            ))
-        ;
+            ->add(
+                'publishedAt',
+                'datetime',
+                array(
+                    'widget' => 'choice',
+                )
+            )
+            ->add(
+                'status',
+                'checkbox',
+                array(
+                    'label' => 'Published',
+                    'required' => false,
+                )
+            );
     }
 
     /**
@@ -36,9 +51,11 @@ class PostType extends AbstractType
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Post',
-        ));
+        $resolver->setDefaults(
+            array(
+                'data_class' => 'AppBundle\Entity\Post',
+            )
+        );
     }
 
     /**

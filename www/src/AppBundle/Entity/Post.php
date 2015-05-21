@@ -53,6 +53,14 @@ class Post
      * @Assert\DateTime()
      */
     private $publishedAt;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="status", type="boolean")
+     */
+    private $status;
+
     /**
      * @ORM\OneToMany(
      *      targetEntity="Comment",
@@ -150,4 +158,21 @@ class Post
     {
         $this->summary = $summary;
     }
+
+    /**
+     * @return boolean
+     */
+    public function isStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param boolean $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
 }
