@@ -1081,7 +1081,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "KnpLabs",
+                    "name": "Knplabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -1979,12 +1979,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeAdminBundle.git",
-                "reference": "e124368e08a94a6cd0888c5696a779dd254b6660"
+                "reference": "b8dcb3bc25fe6bcc1858da0123d2327d98d954d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/e124368e08a94a6cd0888c5696a779dd254b6660",
-                "reference": "e124368e08a94a6cd0888c5696a779dd254b6660",
+                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/b8dcb3bc25fe6bcc1858da0123d2327d98d954d6",
+                "reference": "b8dcb3bc25fe6bcc1858da0123d2327d98d954d6",
                 "shasum": ""
             },
             "require": {
@@ -2044,7 +2044,7 @@
                 "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/master",
                 "issues": "https://github.com/wanjee/ShuweeAdminBundle/issues"
             },
-            "time": "2015-05-15 15:44:40"
+            "time": "2015-05-20 18:38:35"
         }
     ],
     "packages-dev": [
