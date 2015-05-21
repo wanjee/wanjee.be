@@ -39,6 +39,14 @@ class PostAdmin extends Admin
                 )
             )
             ->addField(
+                'image',
+                'image',
+                array(
+                    'label' => 'Image',
+                    'base_path' => 'uploads/posts'
+                )
+            )
+            ->addField(
                 'title',
                 'text',
                 array(
