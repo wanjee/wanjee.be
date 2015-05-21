@@ -28,6 +28,15 @@ class PostType extends AbstractType
                     'attr' => array('rows' => 20),
                 )
             )
+            ->add(
+                'file',
+                'file',
+                array(
+                    'label' => 'Image',
+                    'required' => false,
+                    'preview_base_path' => 'WebPath',
+                )
+            )
             ->add('authorEmail', 'email')
             ->add(
                 'publishedAt',
