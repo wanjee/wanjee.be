@@ -58,6 +58,7 @@ class PostAdmin extends Admin
                 'text',
                 array(
                     'label' => 'Author',
+                    'truncate' => 80,
                 )
             )
             ->addField(
@@ -65,14 +66,16 @@ class PostAdmin extends Admin
                 'date',
                 array(
                     'label' => 'Published',
-                    'date_format' => 'F j, Y',
+                    'date_format' => 'd/m/Y',
                 )
             )
             ->addField(
                 'status',
                 'boolean',
                 array(
-                    'label' => 'Published'
+                    'label' => 'Published',
+                    'label_true' => 'Published',
+                    'label_false' => 'Unpublished',
                 )
             );
 
