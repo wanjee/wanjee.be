@@ -1471,16 +1471,16 @@
         },
         {
             "name": "sensiolabs/security-checker",
-            "version": "v2.0.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "cecb1397087dc9c733796eda6e9d121336039cdc"
+                "reference": "cde03c48d490d805ef1349e5108f8b3085981ead"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/cecb1397087dc9c733796eda6e9d121336039cdc",
-                "reference": "cecb1397087dc9c733796eda6e9d121336039cdc",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/cde03c48d490d805ef1349e5108f8b3085981ead",
+                "reference": "cde03c48d490d805ef1349e5108f8b3085981ead",
                 "shasum": ""
             },
             "require": {
@@ -1512,7 +1512,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2015-04-21 07:52:05"
+            "time": "2015-05-22 14:21:04"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1979,12 +1979,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeAdminBundle.git",
-                "reference": "182597fd7f7e5d6b4a8643bd2e2d40b01a67c3bc"
+                "reference": "ff99b1af478042d2e70c0608ed896ec6a753587d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/182597fd7f7e5d6b4a8643bd2e2d40b01a67c3bc",
-                "reference": "182597fd7f7e5d6b4a8643bd2e2d40b01a67c3bc",
+                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/ff99b1af478042d2e70c0608ed896ec6a753587d",
+                "reference": "ff99b1af478042d2e70c0608ed896ec6a753587d",
                 "shasum": ""
             },
             "require": {
@@ -2044,7 +2044,7 @@
                 "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/master",
                 "issues": "https://github.com/wanjee/ShuweeAdminBundle/issues"
             },
-            "time": "2015-05-21 19:56:51"
+            "time": "2015-05-26 21:02:35"
         }
     ],
     "packages-dev": [
