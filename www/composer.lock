@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "979f5db90589775c68b34a7dc0e89497",
+    "hash": "1431a3560daa83ec556bd055866788bf",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -405,16 +405,16 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "1986ff3a945b584c6505d07eae92d77e41131078"
+                "reference": "0b9e27037c4fdbad515ee5ec89842e9091a6480f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/1986ff3a945b584c6505d07eae92d77e41131078",
-                "reference": "1986ff3a945b584c6505d07eae92d77e41131078",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/0b9e27037c4fdbad515ee5ec89842e9091a6480f",
+                "reference": "0b9e27037c4fdbad515ee5ec89842e9091a6480f",
                 "shasum": ""
             },
             "require": {
@@ -422,6 +422,7 @@
                 "doctrine/doctrine-cache-bundle": "~1.0",
                 "jdorn/sql-formatter": "~1.1",
                 "php": ">=5.3.2",
+                "symfony/console": "~2.3",
                 "symfony/doctrine-bridge": "~2.2",
                 "symfony/framework-bundle": "~2.3"
             },
@@ -440,7 +441,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -478,7 +479,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-02-28 11:04:45"
+            "time": "2015-05-28 12:27:15"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -1471,16 +1472,16 @@
         },
         {
             "name": "sensiolabs/security-checker",
-            "version": "v2.0.3",
+            "version": "v2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "cde03c48d490d805ef1349e5108f8b3085981ead"
+                "reference": "2c2a71f1c77d9765c12638c4724d9ca23658a810"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/cde03c48d490d805ef1349e5108f8b3085981ead",
-                "reference": "cde03c48d490d805ef1349e5108f8b3085981ead",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/2c2a71f1c77d9765c12638c4724d9ca23658a810",
+                "reference": "2c2a71f1c77d9765c12638c4724d9ca23658a810",
                 "shasum": ""
             },
             "require": {
@@ -1512,7 +1513,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2015-05-22 14:21:04"
+            "time": "2015-05-28 14:22:40"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1749,16 +1750,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.6.7",
+            "version": "v2.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "0449d0e1178bc8e934520b20432d1705c3b25e7e"
+                "reference": "7ae1934082d9ac299303b146e4a999274a723e94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0449d0e1178bc8e934520b20432d1705c3b25e7e",
-                "reference": "0449d0e1178bc8e934520b20432d1705c3b25e7e",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/7ae1934082d9ac299303b146e4a999274a723e94",
+                "reference": "7ae1934082d9ac299303b146e4a999274a723e94",
                 "shasum": ""
             },
             "require": {
@@ -1849,20 +1850,20 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "The Symfony PHP framework",
-            "homepage": "http://symfony.com",
+            "homepage": "https://symfony.com",
             "keywords": [
                 "framework"
             ],
-            "time": "2015-05-11 01:58:49"
+            "time": "2015-05-27 00:17:10"
         },
         {
             "name": "twig/extensions",
@@ -1979,12 +1980,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeAdminBundle.git",
-                "reference": "ff99b1af478042d2e70c0608ed896ec6a753587d"
+                "reference": "6782fbfb8218b500dfb3e3c3aa1a7cc5b7618cb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/ff99b1af478042d2e70c0608ed896ec6a753587d",
-                "reference": "ff99b1af478042d2e70c0608ed896ec6a753587d",
+                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/6782fbfb8218b500dfb3e3c3aa1a7cc5b7618cb1",
+                "reference": "6782fbfb8218b500dfb3e3c3aa1a7cc5b7618cb1",
                 "shasum": ""
             },
             "require": {
@@ -2044,7 +2045,78 @@
                 "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/master",
                 "issues": "https://github.com/wanjee/ShuweeAdminBundle/issues"
             },
-            "time": "2015-05-26 21:02:35"
+            "time": "2015-05-28 19:02:29"
+        },
+        {
+            "name": "wanjee/shuwee-config-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wanjee/ShuweeConfigBundle.git",
+                "reference": "6e1fa93ce52b6a6f2a2361919fa8ae5a90cf7c02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wanjee/ShuweeConfigBundle/zipball/6e1fa93ce52b6a6f2a2361919fa8ae5a90cf7c02",
+                "reference": "6e1fa93ce52b6a6f2a2361919fa8ae5a90cf7c02",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/framework-bundle": "~2.0",
+                "twig/twig": "~1.5",
+                "wanjee/shuwee-admin-bundle": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wanjee\\Shuwee\\ConfigBundle\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Wanjee\\Shuwee\\ConfigBundle\\": "tests"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sébastien Piraux",
+                    "email": "wanjee.be@gmail.com",
+                    "homepage": "http://www.wanjee.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Shuwee's tribe",
+                    "homepage": "https://github.com/wanjee/ShuweeConfigBundle/graphs/contributors"
+                }
+            ],
+            "description": "Config bundle.  Part of the Shuwee project",
+            "homepage": "https://github.com/wanjee/ShuweeConfigBundle",
+            "keywords": [
+                "Wanjee",
+                "admin",
+                "administration",
+                "backend",
+                "bundle",
+                "shuwee",
+                "symfony2"
+            ],
+            "support": {
+                "source": "https://github.com/wanjee/ShuweeConfigBundle/tree/master",
+                "issues": "https://github.com/wanjee/ShuweeConfigBundle/issues"
+            },
+            "time": "2015-05-28 21:50:46"
         }
     ],
     "packages-dev": [
@@ -2100,7 +2172,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "wanjee/shuwee-admin-bundle": 20
+        "wanjee/shuwee-admin-bundle": 20,
+        "wanjee/shuwee-config-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
