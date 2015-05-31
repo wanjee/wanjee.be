@@ -62,6 +62,15 @@ class PostAdmin extends Admin
                 )
             )
             ->addField(
+                'authorEmail',
+                'link',
+                array(
+                    'label' => 'Email',
+                    'label_link' => 'Email',
+                    'mailto' => true,
+                )
+            )
+            ->addField(
                 'publishedAt',
                 'date',
                 array(
