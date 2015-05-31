@@ -1980,12 +1980,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeAdminBundle.git",
-                "reference": "1b60b77334695259511b4b1e537289eee3d79e17"
+                "reference": "ccc695020807bb2fe4e85c330cd02066f6c26c7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/1b60b77334695259511b4b1e537289eee3d79e17",
-                "reference": "1b60b77334695259511b4b1e537289eee3d79e17",
+                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/ccc695020807bb2fe4e85c330cd02066f6c26c7c",
+                "reference": "ccc695020807bb2fe4e85c330cd02066f6c26c7c",
                 "shasum": ""
             },
             "require": {
@@ -2045,7 +2045,7 @@
                 "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/master",
                 "issues": "https://github.com/wanjee/ShuweeAdminBundle/issues"
             },
-            "time": "2015-05-30 08:00:12"
+            "time": "2015-05-31 14:26:19"
         },
         {
             "name": "wanjee/shuwee-config-bundle",
@@ -2053,12 +2053,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeConfigBundle.git",
-                "reference": "6e1fa93ce52b6a6f2a2361919fa8ae5a90cf7c02"
+                "reference": "7effcdf8a03196eeb2d695c86205245f36e1037b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeConfigBundle/zipball/6e1fa93ce52b6a6f2a2361919fa8ae5a90cf7c02",
-                "reference": "6e1fa93ce52b6a6f2a2361919fa8ae5a90cf7c02",
+                "url": "https://api.github.com/repos/wanjee/ShuweeConfigBundle/zipball/7effcdf8a03196eeb2d695c86205245f36e1037b",
+                "reference": "7effcdf8a03196eeb2d695c86205245f36e1037b",
                 "shasum": ""
             },
             "require": {
@@ -2116,7 +2116,7 @@
                 "source": "https://github.com/wanjee/ShuweeConfigBundle/tree/master",
                 "issues": "https://github.com/wanjee/ShuweeConfigBundle/issues"
             },
-            "time": "2015-05-28 21:50:46"
+            "time": "2015-05-31 13:35:39"
         }
     ],
     "packages-dev": [
