@@ -36,6 +36,7 @@ class LoadFixtures implements FixtureInterface, ContainerAwareInterface
             $post->setSummary($this->getRandomPostSummary());
             // FIXME implement a slugger
             $post->setSlug('');
+            $post->setStatus(true);
             $post->setContent($this->getPostContent());
             $post->setAuthorEmail('anna_admin@symfony.com');
             $post->setPublishedAt(new \DateTime('now - '.$i.'days'));
