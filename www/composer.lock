@@ -1172,17 +1172,17 @@
         },
         {
             "name": "liip/imagine-bundle",
-            "version": "1.2.6",
+            "version": "1.2.7",
             "target-dir": "Liip/ImagineBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "e24256aa688b1afc9edfaae86f82c80d9e471436"
+                "reference": "e9a2fa16e0467d4406b75432bedaec3fa5f70a92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/e24256aa688b1afc9edfaae86f82c80d9e471436",
-                "reference": "e24256aa688b1afc9edfaae86f82c80d9e471436",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/e9a2fa16e0467d4406b75432bedaec3fa5f70a92",
+                "reference": "e9a2fa16e0467d4406b75432bedaec3fa5f70a92",
                 "shasum": ""
             },
             "require": {
@@ -1210,7 +1210,7 @@
             },
             "suggest": {
                 "amazonwebservices/aws-sdk-for-php": "Add it if you'd like to use aws v1 resolver",
-                "aws/aws-sdk-php": "Add it if you'd like to use aws v2 resolver",
+                "aws/aws-sdk-php": "Add it if you'd like to use aws v2 or v3 resolver",
                 "monolog/monolog": "If you'd want to write logs",
                 "twig/twig": "If you'd want to use some handy twig filters"
             },
@@ -1242,7 +1242,7 @@
                 "image",
                 "imagine"
             ],
-            "time": "2015-04-24 13:41:22"
+            "time": "2015-06-02 17:43:28"
         },
         {
             "name": "monolog/monolog",
@@ -1357,17 +1357,17 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v3.0.25",
+            "version": "v3.0.28",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "01931139b0f067a4016d5d56e82c2b3086533b89"
+                "reference": "8175618b07793b9d43c3be931f3d8d4c14c9e866"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/01931139b0f067a4016d5d56e82c2b3086533b89",
-                "reference": "01931139b0f067a4016d5d56e82c2b3086533b89",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/8175618b07793b9d43c3be931f3d8d4c14c9e866",
+                "reference": "8175618b07793b9d43c3be931f3d8d4c14c9e866",
                 "shasum": ""
             },
             "require": {
@@ -1413,7 +1413,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2015-05-29 22:35:41"
+            "time": "2015-06-01 15:04:20"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -1980,12 +1980,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeAdminBundle.git",
-                "reference": "ccc695020807bb2fe4e85c330cd02066f6c26c7c"
+                "reference": "42cc61d7144411ec8c87735655cfedf56eafdff3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/ccc695020807bb2fe4e85c330cd02066f6c26c7c",
-                "reference": "ccc695020807bb2fe4e85c330cd02066f6c26c7c",
+                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/42cc61d7144411ec8c87735655cfedf56eafdff3",
+                "reference": "42cc61d7144411ec8c87735655cfedf56eafdff3",
                 "shasum": ""
             },
             "require": {
@@ -2045,7 +2045,7 @@
                 "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/master",
                 "issues": "https://github.com/wanjee/ShuweeAdminBundle/issues"
             },
-            "time": "2015-05-31 14:26:19"
+            "time": "2015-06-02 21:04:03"
         },
         {
             "name": "wanjee/shuwee-config-bundle",
@@ -2053,12 +2053,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeConfigBundle.git",
-                "reference": "7effcdf8a03196eeb2d695c86205245f36e1037b"
+                "reference": "eb89c57ba1f34c2cb8bdc6beb63f3abcc15d041e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeConfigBundle/zipball/7effcdf8a03196eeb2d695c86205245f36e1037b",
-                "reference": "7effcdf8a03196eeb2d695c86205245f36e1037b",
+                "url": "https://api.github.com/repos/wanjee/ShuweeConfigBundle/zipball/eb89c57ba1f34c2cb8bdc6beb63f3abcc15d041e",
+                "reference": "eb89c57ba1f34c2cb8bdc6beb63f3abcc15d041e",
                 "shasum": ""
             },
             "require": {
@@ -2116,7 +2116,7 @@
                 "source": "https://github.com/wanjee/ShuweeConfigBundle/tree/master",
                 "issues": "https://github.com/wanjee/ShuweeConfigBundle/issues"
             },
-            "time": "2015-05-31 13:35:39"
+            "time": "2015-06-02 21:14:00"
         }
     ],
     "packages-dev": [
