@@ -4,3 +4,6 @@ _liip_imagine:
 shuwee_admin:
     resource: "@ShuweeAdminBundle/Resources/config/routing.yml"
     prefix: /admin
+
+shuwee_config:
+    resource: "@ShuweeConfigBundle/Resources/config/routing.yml"
