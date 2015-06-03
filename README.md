@@ -26,7 +26,7 @@ How to install this demo
 - $ bin/console cache:clear --env=prod 
 - $ bin/console assets:install --symlink
 - $ bin/console assetic:dump --env=prod
-- $ bin/console doctrine:fixtures:load
+- $ bin/console doctrine:fixtures:load (only if you want to load example content)
 - $ bin/console shuwee:admin:user:add --roles=ROLE_ADMIN
 - Connect to http://your.domain.dev/admin
 
