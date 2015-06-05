@@ -20,7 +20,13 @@ class PostType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('summary', 'textarea')
+            ->add(
+                'summary',
+                'textarea',
+                array(
+                    'help' => 'Short introduction.  Keep it simple and short.'
+                )
+            )
             ->add(
                 'content',
                 'textarea',
