@@ -32,6 +32,7 @@ class PostType extends AbstractType
                 'textarea',
                 array(
                     'attr' => array('rows' => 20),
+                    'markdown' => true,
                 )
             )
             ->add(
