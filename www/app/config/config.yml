@@ -81,3 +81,8 @@ services:
         class: Twig_Extensions_Extension_Text
         tags:
             - { name: twig.extension }
+
+knp_paginator:
+    template:
+        pagination: ShuweeAdminBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig
+        sortable: ShuweeAdminBundle:Pagination:sortable_link.html.twig
