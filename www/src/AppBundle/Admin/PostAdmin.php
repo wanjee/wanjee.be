@@ -18,8 +18,7 @@ class PostAdmin extends Admin
      */
     public function getForm()
     {
-        // Return either a fully qualified class name
-        // or the service id of your form if it is defined as a service
+        // Must return a fully qualified class name
         return 'AppBundle\Form\PostType';
     }
 
@@ -28,7 +27,7 @@ class PostAdmin extends Admin
      */
     public function getDatagrid()
     {
-        $datagrid = new Datagrid($this);
+        $datagrid = new Datagrid($this, array('limit_per_page' => 10));
 
         $datagrid
             ->addField(
@@ -36,6 +35,7 @@ class PostAdmin extends Admin
                 'text',
                 array(
                     'label' => '#',
+                    'sortable' => true,
                 )
             )
             ->addField(
@@ -51,6 +51,7 @@ class PostAdmin extends Admin
                 'text',
                 array(
                     'label' => 'Title',
+                    'sortable' => true,
                 )
             )
             ->addField(
@@ -58,6 +59,7 @@ class PostAdmin extends Admin
                 'text',
                 array(
                     'label' => 'Author',
+                    'sortable' => true,
                     'truncate' => 80,
                 )
             )
@@ -75,6 +77,7 @@ class PostAdmin extends Admin
                 'date',
                 array(
                     'label' => 'Published',
+                    'sortable' => true,
                     'date_format' => 'd/m/Y',
                 )
             )
@@ -83,6 +86,7 @@ class PostAdmin extends Admin
                 'boolean',
                 array(
                     'label' => 'Published',
+                    'sortable' => true,
                     'label_true' => 'Published',
                     'label_false' => 'Unpublished',
                 )

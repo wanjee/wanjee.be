@@ -28,11 +28,11 @@ class CommentAdmin extends Admin
      */
     public function getDatagrid()
     {
-        $datagrid = new Datagrid($this);
+        $datagrid = new Datagrid($this, array('limit_per_page' => 25));
 
         $datagrid
-            ->addField('id', 'text')
-            ->addField('content', 'text')
+            ->addField('id', 'text', array('sortable' => true))
+            ->addField('content', 'text', array('sortable' => true))
             ->addField('authorEmail', 'text');
 
         return $datagrid;
