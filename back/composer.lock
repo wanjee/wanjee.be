@@ -2113,12 +2113,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeAdminBundle.git",
-                "reference": "99062376ea33cca94d2323f67f946bc31047518b"
+                "reference": "9ccfa97f677f5100b963e6b6ed5fa1cb2c3d4bf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/99062376ea33cca94d2323f67f946bc31047518b",
-                "reference": "99062376ea33cca94d2323f67f946bc31047518b",
+                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/9ccfa97f677f5100b963e6b6ed5fa1cb2c3d4bf1",
+                "reference": "9ccfa97f677f5100b963e6b6ed5fa1cb2c3d4bf1",
                 "shasum": ""
             },
             "require": {
@@ -2176,10 +2176,10 @@
                 "symfony2"
             ],
             "support": {
-                "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/master",
+                "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/grunt",
                 "issues": "https://github.com/wanjee/ShuweeAdminBundle/issues"
             },
-            "time": "2015-06-23 20:45:51"
+            "time": "2015-07-05 19:21:46"
         },
         {
             "name": "wanjee/shuwee-config-bundle",
