@@ -1,4 +1,6 @@
 /.idea/
 /.vagrant/
-back/web/uploads
+node_modules
+
 back/web/media
+back/web/uploads
