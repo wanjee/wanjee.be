@@ -4,3 +4,4 @@ node_modules
 
 back/web/media
 back/web/uploads
+npm-debug.log
