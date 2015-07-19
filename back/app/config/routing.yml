@@ -7,3 +7,7 @@ shuwee_admin:
 
 shuwee_config:
     resource: "@ShuweeConfigBundle/Resources/config/routing.yml"
+
+appbundle:
+    resource: "@AppBundle/Controller/"
+    type: annotation
