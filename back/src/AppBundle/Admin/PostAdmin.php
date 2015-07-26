@@ -27,7 +27,12 @@ class PostAdmin extends Admin
      */
     public function getDatagrid()
     {
-        $datagrid = new Datagrid($this, array('limit_per_page' => 10));
+        $datagrid = new Datagrid($this, array(
+                'limit_per_page' => 10,
+                'default_sort_column' => 'id',
+                'default_sort_order' => 'asc',
+            )
+        );
 
         $datagrid
             ->addField(

@@ -28,7 +28,12 @@ class CommentAdmin extends Admin
      */
     public function getDatagrid()
     {
-        $datagrid = new Datagrid($this, array('limit_per_page' => 25));
+        $datagrid = new Datagrid($this, array(
+                'limit_per_page' => 25,
+                'default_sort_column' => 'id',
+                'default_sort_order' => 'asc',
+            )
+        );
 
         $datagrid
             ->addField('id', 'text', array('sortable' => true))
