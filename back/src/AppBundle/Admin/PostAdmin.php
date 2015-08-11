@@ -95,6 +95,17 @@ class PostAdmin extends Admin
                     'label_true' => 'Published',
                     'label_false' => 'Unpublished',
                 )
+            )
+            ->addField(
+                'callback',
+                'text',
+                array(
+                    'label' => 'Comments',
+                    'callback' => function ($entity) {
+                        $comments = $entity->getComments();
+                        return sizeof($comments);
+                    },
+                )
             );
 
         return $datagrid;
