@@ -114,14 +114,6 @@ class PostAdmin extends Admin
     /**
      * @return string
      */
-    public function getEntityName()
-    {
-        return 'AppBundle:Post';
-    }
-
-    /**
-     * @return string
-     */
     public function getEntityClass()
     {
         return 'AppBundle\Entity\Post';

@@ -46,14 +46,6 @@ class CommentAdmin extends Admin
     /**
      * @return string
      */
-    public function getEntityName()
-    {
-        return 'AppBundle:Comment';
-    }
-
-    /**
-     * @return string
-     */
     public function getEntityClass()
     {
         return 'AppBundle\Entity\Comment';
