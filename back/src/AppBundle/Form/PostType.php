@@ -24,7 +24,8 @@ class PostType extends AbstractType
                 'summary',
                 'textarea',
                 array(
-                    'help' => 'Short introduction.  Keep it simple and short.'
+                    'help' => 'Short introduction.  Keep it simple and short.',
+                    'group' => 'Content',
                 )
             )
             ->add(
@@ -33,6 +34,7 @@ class PostType extends AbstractType
                 array(
                     'attr' => array('rows' => 20),
                     'markdown' => true,
+                    'group' => 'Content',
                 )
             )
             ->add(
@@ -42,14 +44,22 @@ class PostType extends AbstractType
                     'label' => 'Image',
                     'required' => false,
                     'preview_base_path' => 'WebPath',
+                    'group' => 'Media',
                 )
             )
-            ->add('authorEmail', 'email')
+            ->add(
+                'authorEmail',
+                'email',
+                array(
+                    'group' => 'Meta',
+                )
+            )
             ->add(
                 'publishedAt',
                 'datetime',
                 array(
                     'widget' => 'choice',
+                    'group' => 'Meta',
                 )
             )
             ->add(
@@ -58,6 +68,7 @@ class PostType extends AbstractType
                 array(
                     'label' => 'Published',
                     'required' => false,
+                    'group' => 'Meta',
                 )
             );
     }
