@@ -405,16 +405,16 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
-            "version": "v1.5.0",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "0b9e27037c4fdbad515ee5ec89842e9091a6480f"
+                "reference": "8c5cedb4f2f7ebb66a963ae46ad9daa1e31cee01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/0b9e27037c4fdbad515ee5ec89842e9091a6480f",
-                "reference": "0b9e27037c4fdbad515ee5ec89842e9091a6480f",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/8c5cedb4f2f7ebb66a963ae46ad9daa1e31cee01",
+                "reference": "8c5cedb4f2f7ebb66a963ae46ad9daa1e31cee01",
                 "shasum": ""
             },
             "require": {
@@ -422,16 +422,16 @@
                 "doctrine/doctrine-cache-bundle": "~1.0",
                 "jdorn/sql-formatter": "~1.1",
                 "php": ">=5.3.2",
-                "symfony/console": "~2.3",
-                "symfony/doctrine-bridge": "~2.2",
-                "symfony/framework-bundle": "~2.3"
+                "symfony/console": "~2.3|~3.0",
+                "symfony/doctrine-bridge": "~2.2|~3.0",
+                "symfony/framework-bundle": "~2.3|~3.0"
             },
             "require-dev": {
                 "doctrine/orm": "~2.3",
                 "phpunit/phpunit": "~4",
                 "satooshi/php-coveralls": "~0.6.1",
-                "symfony/validator": "~2.2",
-                "symfony/yaml": "~2.2",
+                "symfony/validator": "~2.2|~3.0",
+                "symfony/yaml": "~2.2|~3.0",
                 "twig/twig": "~1.10"
             },
             "suggest": {
@@ -479,7 +479,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-05-28 12:27:15"
+            "time": "2015-08-12 15:52:00"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -2053,16 +2053,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.19.0",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "edbeaf43b0a606cdaadc32a11d2673614a377b90"
+                "reference": "1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/edbeaf43b0a606cdaadc32a11d2673614a377b90",
-                "reference": "edbeaf43b0a606cdaadc32a11d2673614a377b90",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844",
+                "reference": "1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844",
                 "shasum": ""
             },
             "require": {
@@ -2071,7 +2071,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.19-dev"
+                    "dev-master": "1.20-dev"
                 }
             },
             "autoload": {
@@ -2106,7 +2106,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-07-31 13:45:26"
+            "time": "2015-08-12 15:56:39"
         },
         {
             "name": "wanjee/shuwee-admin-bundle",
@@ -2114,12 +2114,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeAdminBundle.git",
-                "reference": "647d662c298e2327927ba2626919c8d53700f3f3"
+                "reference": "a3cce79f912e4714f2267e39106b026326fa3875"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/647d662c298e2327927ba2626919c8d53700f3f3",
-                "reference": "647d662c298e2327927ba2626919c8d53700f3f3",
+                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/a3cce79f912e4714f2267e39106b026326fa3875",
+                "reference": "a3cce79f912e4714f2267e39106b026326fa3875",
                 "shasum": ""
             },
             "require": {
@@ -2128,7 +2128,7 @@
                 "knplabs/knp-paginator-bundle": ">=2.0,<3.0.0",
                 "liip/imagine-bundle": "~1.2",
                 "php": ">=5.4",
-                "symfony/framework-bundle": "~2.6",
+                "symfony/framework-bundle": "~2.7",
                 "twig/twig": "~1.5"
             },
             "require-dev": {
@@ -2177,10 +2177,10 @@
                 "symfony2"
             ],
             "support": {
-                "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/v0.2.3",
+                "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/master",
                 "issues": "https://github.com/wanjee/ShuweeAdminBundle/issues"
             },
-            "time": "2015-08-11 20:46:51"
+            "time": "2015-08-18 19:53:10"
         },
         {
             "name": "wanjee/shuwee-config-bundle",
@@ -2188,12 +2188,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeConfigBundle.git",
-                "reference": "854155fac3fae2764f7adb77f856e6ad7a6007b5"
+                "reference": "5b9ee16d2582184a4da3f1f439a3301583bf447f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeConfigBundle/zipball/854155fac3fae2764f7adb77f856e6ad7a6007b5",
-                "reference": "854155fac3fae2764f7adb77f856e6ad7a6007b5",
+                "url": "https://api.github.com/repos/wanjee/ShuweeConfigBundle/zipball/5b9ee16d2582184a4da3f1f439a3301583bf447f",
+                "reference": "5b9ee16d2582184a4da3f1f439a3301583bf447f",
                 "shasum": ""
             },
             "require": {
@@ -2251,7 +2251,7 @@
                 "source": "https://github.com/wanjee/ShuweeConfigBundle/tree/master",
                 "issues": "https://github.com/wanjee/ShuweeConfigBundle/issues"
             },
-            "time": "2015-08-10 08:00:08"
+            "time": "2015-08-16 18:46:53"
         }
     ],
     "packages-dev": [
