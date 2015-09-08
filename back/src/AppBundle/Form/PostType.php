@@ -48,13 +48,6 @@ class PostType extends AbstractType
                 )
             )
             ->add(
-                'authorEmail',
-                'email',
-                array(
-                    'group' => 'Meta',
-                )
-            )
-            ->add(
                 'publishedAt',
                 'datetime',
                 array(

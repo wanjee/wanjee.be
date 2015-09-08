@@ -3,7 +3,6 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -12,10 +11,10 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @package AppBundle\Entity
  *
  * @ORM\Table(name="post")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\Repository\PostRepository")
  * @ORM\HasLifecycleCallbacks
  */
-class Post
+class Post implements \JsonSerializable
 {
     /**
      * @ORM\Id
@@ -23,20 +22,24 @@ class Post
      * @ORM\Column(type="integer")
      */
     private $id;
+
     /**
      * @ORM\Column(type="string")
      * @Assert\NotBlank()
      */
     private $title;
+
     /**
      * @ORM\Column(type="string")
      */
     private $slug;
+
     /**
      * @ORM\Column(type="string")
      * @Assert\NotBlank(message="Give your post a summary!")
      */
     private $summary;
+
     /**
      * @ORM\Column(type="text")
      * @Assert\Length(
@@ -45,15 +48,12 @@ class Post
      * )
      */
     private $content;
+
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
-    /**
-     * @ORM\Column(type="string")
-     * @Assert\Email()
-     */
-    private $authorEmail;
+
     /**
      * @ORM\Column(type="datetime")
      * @Assert\DateTime()
@@ -66,16 +66,6 @@ class Post
      * @ORM\Column(name="status", type="boolean")
      */
     private $status;
-
-    /**
-     * @ORM\OneToMany(
-     *      targetEntity="Comment",
-     *      mappedBy="post",
-     *      orphanRemoval=true
-     * )
-     * @ORM\OrderBy({"publishedAt" = "DESC"})
-     */
-    private $comments;
 
     /**
      * Not mapped, used for $this->image upload
@@ -97,42 +87,65 @@ class Post
      */
     protected $path = 'posts';
 
+    /**
+     *
+     */
     public function __construct()
     {
         $this->publishedAt = new \DateTime();
-        $this->comments = new ArrayCollection();
     }
 
+    /**
+     * @return mixed
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @return mixed
+     */
     public function getTitle()
     {
         return $this->title;
     }
 
+    /**
+     * @param $title
+     */
     public function setTitle($title)
     {
         $this->title = $title;
     }
 
+    /**
+     * @return mixed
+     */
     public function getSlug()
     {
         return $this->slug;
     }
 
+    /**
+     * @param $slug
+     */
     public function setSlug($slug)
     {
         $this->slug = $slug;
     }
 
+    /**
+     * @return mixed
+     */
     public function getContent()
     {
         return $this->content;
     }
 
+    /**
+     * @param $content
+     */
     public function setContent($content)
     {
         $this->content = $content;
@@ -249,48 +262,33 @@ class Post
         }
     }
 
-    public function getAuthorEmail()
-    {
-        return $this->authorEmail;
-    }
-
-    public function setAuthorEmail($authorEmail)
-    {
-        $this->authorEmail = $authorEmail;
-    }
-
+    /**
+     * @return \DateTime
+     */
     public function getPublishedAt()
     {
         return $this->publishedAt;
     }
 
+    /**
+     * @param $publishedAt
+     */
     public function setPublishedAt($publishedAt)
     {
         $this->publishedAt = $publishedAt;
     }
 
-    public function getComments()
-    {
-        return $this->comments;
-    }
-
-    public function addComment(Comment $comment)
-    {
-        $this->comments->add($comment);
-        $comment->setPost($this);
-    }
-
-    public function removeComment(Comment $comment)
-    {
-        $this->comments->removeElement($comment);
-        $comment->setPost(null);
-    }
-
+    /**
+     * @return mixed
+     */
     public function getSummary()
     {
         return $this->summary;
     }
 
+    /**
+     * @param $summary
+     */
     public function setSummary($summary)
     {
         $this->summary = $summary;
@@ -710,4 +708,17 @@ class Post
         return $options['lowercase'] ? mb_strtolower($str, 'UTF-8') : $str;
     }
 
+    /**
+     * @return mixed Returns data which can be serialized by json_encode().
+     */
+    function jsonSerialize()
+    {
+        return array(
+            'title' => $this->title,
+            'type' => $this->summary,
+            'content' => $this->content,
+            'image' => $this->image,
+            'publishedAt' => $this->publishedAt,
+        );
+    }
 }

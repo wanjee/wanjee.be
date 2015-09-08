@@ -60,24 +60,6 @@ class PostAdmin extends Admin
                 )
             )
             ->addField(
-                'authorEmail',
-                'text',
-                array(
-                    'label' => 'Author',
-                    'sortable' => true,
-                    'truncate' => 80,
-                )
-            )
-            ->addField(
-                'authorEmail',
-                'link',
-                array(
-                    'label' => 'Email',
-                    'label_link' => 'Email',
-                    'mailto' => true,
-                )
-            )
-            ->addField(
                 'publishedAt',
                 'date',
                 array(
@@ -94,17 +76,6 @@ class PostAdmin extends Admin
                     'sortable' => true,
                     'label_true' => 'Published',
                     'label_false' => 'Unpublished',
-                )
-            )
-            ->addField(
-                'callback',
-                'text',
-                array(
-                    'label' => 'Comments',
-                    'callback' => function ($entity) {
-                        $comments = $entity->getComments();
-                        return sizeof($comments);
-                    },
                 )
             );
 
