@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -30,7 +31,8 @@ class Post implements \JsonSerializable
     private $title;
 
     /**
-     * @ORM\Column(type="string")
+     * @Gedmo\Slug(fields={"title"}, updatable=true, unique=true )
+     * @ORM\Column(length=128, unique=true)
      */
     private $slug;
 
@@ -125,14 +127,6 @@ class Post implements \JsonSerializable
     public function getSlug()
     {
         return $this->slug;
-    }
-
-    /**
-     * @param $slug
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
     }
 
     /**
@@ -714,6 +708,7 @@ class Post implements \JsonSerializable
     function jsonSerialize()
     {
         return array(
+            'slug' => $this->slug,
             'title' => $this->title,
             'type' => $this->summary,
             'content' => $this->content,
