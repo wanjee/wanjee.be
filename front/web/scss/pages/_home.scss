@@ -1,0 +1,9 @@
+section {
+  .slide {
+    width: 100%;
+  }
+
+  &:nth-of-type(2n) {
+    background-color: #FE4B74;
+  }
+}
