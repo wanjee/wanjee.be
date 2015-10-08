@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
-            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Wanjee\Shuwee\AdminBundle\ShuweeAdminBundle(),
             new Wanjee\Shuwee\ConfigBundle\ShuweeConfigBundle(),
             new AppBundle\AppBundle(),

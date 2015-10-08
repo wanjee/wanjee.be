@@ -86,3 +86,8 @@ knp_paginator:
     template:
         pagination: ShuweeAdminBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig
         sortable: ShuweeAdminBundle:Pagination:sortable_link.html.twig
+
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable:   true
