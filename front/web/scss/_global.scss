@@ -1,6 +1,32 @@
 *{
   box-sizing: border-box;
 }
+
 html{
   font-size: 10px;
+}
+
+body {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Utils */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vcenter {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.hcenter {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }

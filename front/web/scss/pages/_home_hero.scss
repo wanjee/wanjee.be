@@ -1,0 +1,24 @@
+#hero {
+  height: 75vh;
+
+  background-color: #363636;
+
+  .container {
+    height: 100%;
+  }
+
+  .row {
+    height: 100%;
+
+    > div {
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  .overlay {
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, .4);
+    min-height: 100%;
+  }
+}
