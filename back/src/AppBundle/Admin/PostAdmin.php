@@ -77,7 +77,8 @@ class PostAdmin extends Admin
                     'label_true' => 'Published',
                     'label_false' => 'Unpublished',
                 )
-            );
+            )
+        ;
 
         return $datagrid;
     }
@@ -96,5 +97,16 @@ class PostAdmin extends Admin
     public function getLabel()
     {
         return '{0} Posts|{1} Post|]1,Inf] Posts';
+    }
+
+    /**
+     * @return array Options
+     */
+    public function getOptions() {
+        return array(
+            'preview_url_callback' => function ($entity) {
+                return $entity->getId();
+            },
+        );
     }
 }
