@@ -2,6 +2,11 @@
   background-color: #EAEBEB;
 
   text-align: center;
+
+  .row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .post {
@@ -9,9 +14,8 @@
   background-color: #FFF;
   border: 1px solid #dddddd;
   border-radius: 4px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
   text-align: left;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
 
   .img-container {
 
@@ -22,7 +26,31 @@
     }
   }
 
-  .copy-container {
+  .meta {
     padding: 15px;
+    text-align: right;
+  }
+
+  .copy-container {
+    padding: 0 15px 15px 15px;
+  }
+
+  a.link {
+    display: block;
+    border-top: 1px solid #dddddd;
+    padding: 15px;
+
+    span {
+      transition: all 0.3s ease-in-out 0s;
+      color: #ffffff;
+      padding-left: 0;
+    }
+
+    &:hover {
+      span {
+        color: #333;
+        padding-left: 5px;
+      }
+    }
   }
 }
