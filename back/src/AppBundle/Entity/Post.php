@@ -708,9 +708,10 @@ class Post implements \JsonSerializable
     function jsonSerialize()
     {
         return array(
+            'id' => $this->id,
             'slug' => $this->slug,
             'title' => $this->title,
-            'type' => $this->summary,
+            'summary' => $this->summary,
             'content' => $this->content,
             'image' => $this->image,
             'publishedAt' => $this->publishedAt,
