@@ -14,20 +14,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,200,400,500,700,800">
 </head>
 
-<body data-spy="scroll" data-target="#navigation-main" data-offset="55">
+<body data-spy="scroll" data-target="#navigation-main">
 
-<nav class="navbar navbar-fixed-top navbar-expanded">
+<nav class="navbar navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-main">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
-                <img src="logo.png" class="img-responsive" alt="">
+            <a class="navbar-brand page-scroll" href="#hero">
+                <img src="logo.png" class="img-responsive" alt="Wanjee">
             </a>
         </div>
         <div class="collapse navbar-collapse" id="navigation-main">
@@ -41,9 +40,9 @@
                 <li>
                     <a class="page-scroll" href="#shuwee">Shuwee</a>
                 </li>
-                <li>
+                <!--<li>
                     <a class="page-scroll" href="#work">Work</a>
-                </li>
+                </li>-->
                 <li>
                     <a class="page-scroll" href="#about">About</a>
                 </li>
@@ -54,33 +53,16 @@
     <!-- /.container -->
 </nav>
 
-<section class="slide" id="hero">
+<section class="slide" id="hero" data-navbar-style="hero">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-12">
                 <div class="vcenter">
                     <h1>Wanjee</h1>
 
                     <h2>Web artisan</h2>
-                    <a href="#!/about" target="_self">About</a>
-                    <a href="#!/blog" target="_self">Blog</a>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="center">
-                    <article class="loaded">
-                        <div class="intro wrapper">
-                            <div class="top_part">
-                                <time datetime="2015-02-11T16:24:02">11 February 2015</time>
-                            </div>
-                            <a href="#!/post/slug" target="_self" class="content">
-                                <h3>Lorem ipsum</h3>
-
-                                <p>Lorem ipsum dolor sit amet consectuetur adipiscim elit... </p>
-                                <span class="play animAll">Read more</span>
-                            </a>
-                        </div>
-                    </article>
+                    <a href="#about" target="_self">About</a>
+                    <a href="#blog" target="_self">Blog</a>
                 </div>
             </div>
         </div>
@@ -89,8 +71,8 @@
 
 <section class="slide container-fluid" id="blog">
     <div class="container">
-        <h1>In the kijker</h1>
-        <div class="lead">What kept me focus lately.</div>
+        <h1>To quality and beyond</h1>
+        <div class="lead">Quality focused small posts about PHP projects (Symfony, Drupal) and web development best practices in general.</div>
         <div class="row">
             <div class="col-lg-4">
                 <article class="post">
@@ -99,14 +81,12 @@
                     </div>
 
                     <div class="img-container">
-                        <a class="img"
-                           style="background-image:url(http://lorempixel.com/400/200/sports/);"
-                           href="#"></a>
+                        <a class="img" style="background-image:url(http://placehold.it/400x200);" href="#"></a>
                     </div>
 
                     <div class="copy-container">
                         <div class="copy">
-                            <h2><a href="#">Entertaining Customers with MoviePass</a></h2>
+                            <h2><a href="#!/post/1">Entertaining Customers with MoviePass</a></h2>
                             <div class="excerpt">
                                 Magnis modipsae que lib voloratati andigen daepeditem quiate es reporemus aut labor. Laceaque quiae sitiorem rest non restibusaes dem tumquam core posae volor remped modis volor.
                             </div>
@@ -116,7 +96,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="link" href="#">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                    <a class="link" href="#!/post/1">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                 </article>
             </div>
             <div class="col-lg-4">
@@ -126,14 +106,12 @@
                     </div>
 
                     <div class="img-container">
-                        <a class="img"
-                           style="background-image:url(http://lorempixel.com/400/200/sports/);"
-                           href="#"></a>
+                        <a class="img" style="background-image:url(http://placehold.it/400x200);" href="#"></a>
                     </div>
 
                     <div class="copy-container">
                         <div class="copy">
-                            <h2><a href="#">Entertaining Customers with MoviePass</a></h2>
+                            <h2><a href="#!/post/1">Entertaining Customers with MoviePass</a></h2>
                             <div class="excerpt">
                                 Magnis modipsae que lib voloratati andigen daepeditem quiate es reporemus aut labor. Laceaque quiae sitiorem rest non restibusaes dem tumquam core posae volor remped modis volor.
                             </div>
@@ -143,7 +121,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="link" href="#">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                    <a class="link" href="#!/post/1">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                 </article>
             </div>
             <div class="col-lg-4">
@@ -153,14 +131,12 @@
                     </div>
 
                     <div class="img-container">
-                        <a class="img"
-                           style="background-image:url(http://lorempixel.com/400/200/sports/);"
-                           href="#"></a>
+                        <a class="img" style="background-image:url(http://placehold.it/400x200);" href="#"></a>
                     </div>
 
                     <div class="copy-container">
                         <div class="copy">
-                            <h2><a href="#">Entertaining Customers with MoviePass</a></h2>
+                            <h2><a href="#!/post/1">Entertaining Customers with MoviePass</a></h2>
                             <div class="excerpt">
                                 Magnis modipsae que lib voloratati andigen daepeditem quiate es reporemus aut labor. Laceaque quiae sitiorem rest non restibusaes dem tumquam core posae volor remped modis volor.
                             </div>
@@ -170,19 +146,20 @@
                             </div>
                         </div>
                     </div>
-                    <a class="link" href="#">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                    <a class="link" href="#!/post/1">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                 </article>
             </div>
         </div>
         <p class="text-center">
-            <a class="btn btn-default" href="/news/">See all news</a>
+            <a class="btn btn-default" href="#!/posts">See all posts</a>
         </p>
     </div>
 </section>
 
 <section class="slide" id="shuwee">
     <div class="container">
-        Shuwee content
+        <h1>Shuwee</h1>
+        <div class="lead">A small Symfony2 CMS for your websites</div>
     </div>
 </section>
 
@@ -190,7 +167,12 @@
 
 <section class="slide" id="about">
     <div class="container">
-        About
+        <h1>Wanjee</h1>
+        <div class="lead">
+            PHP developer, working mostly with <a href="http://symfony.com/">Symfony</a><br>
+            Technical expert at <a href="http://www.emakina.be/">Emakina.be</a> for PHP technologies<br>
+            Also toying with things like Javascript, CSS, Grunt, Silex, Drupal...<br>
+        </div>
     </div>
 </section>
 
@@ -198,7 +180,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-
+                Made with <span class="glyphicon glyphicon-heart" alt="passion"></span> by Wanjee.
+            </div>
+            <div class="col-sm-6">
             </div>
         </div>
     </div>
@@ -206,6 +190,29 @@
 
 <script src="js/vendors.min.js"></script>
 <script src="js/app.min.js"></script>
+
+<!-- Templates -->
+<script id="post-short-template" type="text/template">
+    <article class="post">
+        <div class="meta">
+            <time datetime="2015-09-24"><%= date %></time>
+        </div>
+
+        <div class="img-container">
+            <a class="img" style="background-image:url(<%= image %>);" href="#"></a>
+        </div>
+
+        <div class="copy-container">
+            <div class="copy">
+                <h2><a href="#!/post/<%= slug %>"><%= title %></a></h2>
+                <div class="excerpt">
+                    <%= summary %>
+                </div>
+            </div>
+        </div>
+        <a class="link" href="#!/post/<%= slug %>">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+    </article>
+</script>
 
 </body>
 </html>

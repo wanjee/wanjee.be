@@ -12,20 +12,16 @@ a {
   color: #828B90; }
   a:hover {
     color: #333;
-    text-decoration: none; }
+    text-decoration: none;
+    outline: none; }
   a:focus {
     color: #333;
-    text-decoration: none; }
+    text-decoration: none;
+    outline: none; }
   a:active {
     color: #333;
-    text-decoration: none; }
-
-section.slide {
-  width: 100%;
-  max-width: none;
-  background-color: #FCFCFC;
-  padding-top: 80px;
-  padding-bottom: 80px; }
+    text-decoration: none;
+    outline: none; }
 
 /* Utils */
 .center {
@@ -45,14 +41,39 @@ section.slide {
   transform: translate(-50%, 0); }
 
 /* Components */
+nav.navbar {
+  transition: all 0.2s ease-in-out 0s;
+  background-color: rgba(0, 0, 0, 0.7); }
+  nav.navbar.nav-hidden {
+    top: -55px; }
+nav .navbar-toggle .icon-bar {
+  background-color: #888; }
+nav .nav > li > a:hover, nav .nav > li > a:focus {
+  background-color: transparent;
+  text-decoration: underline; }
+nav .nav > li.active > a {
+  color: #fff; }
+
 footer {
   width: 100%;
-  height: 200px;
   background-color: #E8E8E8; }
+  footer .container {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    footer .container span {
+      color: #E25465; }
 
 /* Pages */
+section.slide {
+  width: 100%;
+  max-width: none;
+  background-color: #FCFCFC;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
 #about {
-  background-color: #FFFFFF;
+  background-color: #EFEFEF;
+  text-align: center;
   height: 1000px; }
 
 #blog {
@@ -92,7 +113,7 @@ footer {
 
 #hero {
   height: 75vh;
-  background-color: #363636; }
+  background: #363636 url(http://blog.wanjee.be/themes/uno/assets/images/background-cover.jpg) no-repeat center center/cover; }
   #hero .container {
     height: 100%; }
   #hero .row {
@@ -106,7 +127,8 @@ footer {
     min-height: 100%; }
 
 #shuwee {
-  background-color: #EFEFEF;
-  height: 1000px; }
+  background-color: #FFFFFF;
+  height: 1000px;
+  text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */

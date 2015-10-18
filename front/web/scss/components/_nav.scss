@@ -1,0 +1,39 @@
+nav {
+  &.navbar {
+    transition: all 0.2s ease-in-out 0s;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    &.nav-visible {
+
+    }
+
+    &.nav-hidden {
+      top: -55px;
+    }
+  }
+
+  .navbar-toggle {
+
+    .icon-bar {
+      background-color: #888;
+    }
+  }
+
+  .nav {
+    > li {
+      > a {
+        &:hover, &:focus {
+          background-color: transparent;
+          text-decoration: underline;
+        }
+      }
+
+      &.active {
+        > a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
