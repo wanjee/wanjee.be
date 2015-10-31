@@ -1,6 +1,4 @@
 /web/bundles/
-/web/js/
-/web/css/
 /app/config/parameters.yml
 /var/bootstrap.php.cache
 /var/SymfonyRequirements.php
@@ -16,3 +14,7 @@
 /composer.phar
 back/web/uploads
 back/web/media
+node_modules
+.sass-cache
+dist/
+.tmp/

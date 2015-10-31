@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/* Others */
+@import "global";
+
+/* Components */
+@import "components/nav";
+@import "components/footer";
+
+/* Pages */
+@import "pages/home";
+@import "pages/home_about";
+@import "pages/home_blog";
+@import "pages/home_hero";
+@import "pages/home_shuwee";

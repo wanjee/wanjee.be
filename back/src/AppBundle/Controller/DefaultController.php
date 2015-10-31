@@ -13,7 +13,14 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->redirect($this->generateUrl('admin_dashboard'));
+        $response = $this->render(
+            'default/index.html.twig'
+        );
+
+        $response->setPublic();
+        $response->setMaxAge(900); // 15 minutes
+
+        return $response;
     }
 
 

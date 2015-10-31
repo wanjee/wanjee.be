@@ -23,6 +23,10 @@
       height: 200px;
       width: 100%;
       display: block;
+      background-color: #cccccc;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
   }
 
@@ -33,6 +37,10 @@
 
   .copy-container {
     padding: 0 15px 15px 15px;
+
+    .excerpt {
+      min-height: 100px;
+    }
   }
 
   a.link {

@@ -44,6 +44,8 @@ a {
 nav.navbar {
   transition: all 0.2s ease-in-out 0s;
   background-color: rgba(0, 0, 0, 0.7); }
+  nav.navbar.transparent {
+    background: none; }
   nav.navbar.nav-hidden {
     top: -55px; }
 nav .navbar-toggle .icon-bar {
@@ -72,9 +74,15 @@ section.slide {
   padding-bottom: 80px; }
 
 #about {
-  background-color: #EFEFEF;
+  background-color: #FFFFFF;
   text-align: center;
   height: 1000px; }
+
+#myself img {
+  max-height: 200px;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 1px solid #DDD; }
 
 #blog {
   background-color: #EAEBEB;
@@ -93,12 +101,18 @@ section.slide {
   .post .img-container a {
     height: 200px;
     width: 100%;
-    display: block; }
+    display: block;
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
   .post .meta {
     padding: 15px;
     text-align: right; }
   .post .copy-container {
     padding: 0 15px 15px 15px; }
+    .post .copy-container .excerpt {
+      min-height: 100px; }
   .post a.link {
     display: block;
     border-top: 1px solid #dddddd;
@@ -113,7 +127,7 @@ section.slide {
 
 #hero {
   height: 75vh;
-  background: #363636 url(http://blog.wanjee.be/themes/uno/assets/images/background-cover.jpg) no-repeat center center/cover; }
+  background: #363636 url(../img/intro_bg_.jpg) no-repeat center center/cover; }
   #hero .container {
     height: 100%; }
   #hero .row {
@@ -127,7 +141,7 @@ section.slide {
     min-height: 100%; }
 
 #shuwee {
-  background-color: #FFFFFF;
+  background-color: #EFEFEF;
   height: 1000px;
   text-align: center; }
 

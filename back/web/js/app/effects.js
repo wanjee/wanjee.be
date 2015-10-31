@@ -1,5 +1,18 @@
 /**
- * Hide Header on on scroll down
+ * Adapt header color to section
+ */
+$('#navigation-main').on('activate.bs.scrollspy', function () {
+    if ($(this).find('li.active a').attr('href') == '#hero') {
+        $('nav.navbar').addClass('transparent');
+    }
+    else {
+        $('nav.navbar').removeClass('transparent');
+    }
+});
+
+
+/**
+ * Hide Header on scroll down, show on scroll up
  */
 var didScroll;
 var lastScrollTop = 0;
@@ -31,7 +44,7 @@ function hasScrolled() {
     }
 
     // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
+    // This is necessary so you never see what is 'behind' the navbar.
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('nav.navbar').removeClass('nav-visible').addClass('nav-hidden');
@@ -44,3 +57,20 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+/**
+ * Smooth scrolling
+ */
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});

@@ -45,6 +45,9 @@ class PostController extends Controller
         $response->setPublic();
         $response->setMaxAge(900); // 15 minutes
 
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set('Access-Control-Allow-Methods', 'GET');
+
         return $response;
     }
 
@@ -77,6 +80,9 @@ class PostController extends Controller
 
         $response->setPublic();
         $response->setMaxAge(900); // 15 minutes
+
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        $response->headers->set('Access-Control-Allow-Methods', 'GET');
 
         return $response;
     }

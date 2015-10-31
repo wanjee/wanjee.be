@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>{% block page_title %}Wanjee - Web artisan{% endblock %}</title>
+    <meta name="description" content="{% block page_description %}{% endblock %}">
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/vendors.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.min.css') }}'">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,200,400,500,700,800">
+    {% endblock %}
+</head>
+
+<body data-spy="scroll" data-target="#navigation-main">
+
+{% include 'partial/footer.html.twig' %}
+
+{% block content %}{% endblock %}
+
+{% include 'partial/footer.html.twig' %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/vendors.min.js') }}"></script>
+    <script src="{{ asset('js/app.min.js') }}"></script>
+{% endblock %}
+
+{% block javascripts_templates %}
+    <!-- Templates -->
+    {% include 'js_template/post_promoted.html.twig' %}
+{% endblock %}
+
+</body>
 </html>
