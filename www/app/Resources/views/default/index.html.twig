@@ -9,7 +9,7 @@
                     <h1>Wanjee</h1>
 
                     <h2>Web artisan</h2>
-                    <a href="#about" target="_self">About</a>
+                    <a href="#about" target="_self">Get to know me</a>
                     <a href="#blog" target="_self">Blog</a>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                     <a class="link" href="#!/post/1">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                 </article>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 hidden-md">
                 <article class="post">
                     <div class="meta">
                         <time datetime="2015-09-24">2015-09-24</time>
@@ -99,26 +99,16 @@
         </figure>
         <h1>Wanjee</h1>
         <div class="lead">
-            PHP developer, working mostly with <a href="http://symfony.com/">Symfony</a><br>
-            Technical expert at <a href="http://www.emakina.be/">Emakina.be</a> for PHP technologies<br>
-            Curious developer. PHP evangelist. Symfony2 fan. Best practices guru. Team player. Open source enthousiast.<br>
+            <p>
+                PHP developer, working mostly with <a href="http://symfony.com/">Symfony</a><br>
+                Technical expert at <a href="http://www.emakina.be/">Emakina.be</a> for PHP technologies<br>
+            </p>
+            <p>
+                Curious developer. PHP evangelist. Symfony2 fan.<br>
+                Best practices guru. Team player. Open source enthousiast.<br>
+            </p>
         </div>
-        <ul class="navigation">
-            <!-- Github -->
-            <li class="navigation__item">
-                <a href="https://github.com/wanjee" title="Github account">
-                    <i class="icon icon-social-github"></i>
-                    <span class="label">Github</span>
-                </a>
-            </li>
-            <!-- LinkedIn -->
-            <li class="navigation__item">
-                <a href="http://be.linkedin.com/in/wanjee" title="LinkedIn account">
-                    <i class="icon icon-social-linkedin"></i>
-                    <span class="label">LinkedIn</span>
-                </a>
-            </li>
-        </ul>
+        {% include 'partial/social.html.twig' %}
     </div>
 </section>
 

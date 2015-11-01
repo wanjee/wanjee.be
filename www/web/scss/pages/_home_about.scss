@@ -1,9 +1,18 @@
 #about {
   background-color: #FFFFFF;
-
   text-align: center;
 
-  height: 1000px;
+  ul.social {
+    li {
+      padding: 50px;
+
+
+      span.icon {
+        font-size: 50px;
+      }
+    }
+  }
+
 }
 
 #myself {
