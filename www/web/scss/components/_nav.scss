@@ -6,6 +6,10 @@ nav {
 
     &.transparent {
       background: none;
+
+      .navbar-brand {
+        display: none;
+      }
     }
 
     &.nav-visible {

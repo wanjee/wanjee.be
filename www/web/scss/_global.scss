@@ -30,24 +30,34 @@ a {
     text-decoration: none;
     outline: none;
   }
+
+  &.btn {
+    margin: 0 20px;
+    padding: 10px 20px;
+
+    &.btn-default {
+      border-radius: 4px;
+    }
+  }
 }
+
 
 /* Utils */
 .center {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .vcenter {
-  position: absolute;
+  position: relative;
   top: 50%;
   transform: translate(0, -50%);
 }
 
 .hcenter {
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translate(-50%, 0);
 }
