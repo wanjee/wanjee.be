@@ -5,10 +5,14 @@
   ul.social {
     li {
       padding: 50px;
+      a {
+        &:hover {
+          color: darken(#0FA2CE, 10%);
+        }
 
-
-      span.icon {
-        font-size: 50px;
+        span.icon {
+          font-size: 50px;
+        }
       }
     }
   }

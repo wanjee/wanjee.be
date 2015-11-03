@@ -13,7 +13,6 @@ nav {
     }
 
     &.nav-visible {
-
     }
 
     &.nav-hidden {
@@ -28,9 +27,15 @@ nav {
     }
   }
 
+  .navbar-brand {
+    font-weight: 500;
+    color: #efefef;
+  }
+
   .nav {
     > li {
       > a {
+        font-weight: 600;
         &:hover, &:focus {
           background-color: transparent;
           text-decoration: underline;

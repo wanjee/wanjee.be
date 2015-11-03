@@ -14,6 +14,7 @@ body {
 
 a {
   color: #828B90;
+  transition: all 0.2s ease-in-out 0s;
 
   &:hover {
     color: #333;
@@ -36,7 +37,62 @@ a {
     padding: 10px 20px;
 
     &.btn-default {
-      border-radius: 4px;
+      border: none;
+      border-radius: 0;
+      color: #828B90;
+      font-weight: 700;
+      background-color: #FFF;
+      &:hover {
+        background-color: darken(#FFF, 10%);
+      }
+      &:active {
+        background-color: darken(#FFF, 20%);
+      }
+    }
+    &.btn-primary {
+      border: none;
+      border-radius: 0;
+      color: #FFFFFF;
+      font-weight: 700;
+      background-color: #0FA2CE;
+      &:hover {
+        background-color: darken(#0FA2CE, 10%);
+        color: #FFFFFF;
+      }
+      &:active {
+        background-color: darken(#0FA2CE, 20%);
+        color: #FFFFFF;
+      }
+    }
+    &.btn-success {
+      border: none;
+      border-radius: 0;
+      color: #FFFFFF;
+      font-weight: 700;
+      background-color: #5CB85C;
+      &:hover {
+        background-color: darken(#5CB85C, 10%);
+        color: #FFFFFF;
+      }
+      &:active {
+        background-color: darken(#5CB85C, 20%);
+        color: #FFFFFF;
+      }
+    }
+    &.btn-danger {
+      border: none;
+      border-radius: 0;
+      color: #FFFFFF;
+      font-weight: 700;
+      background-color: #D9534F;
+      &:hover {
+        background-color: darken(#D9534F, 10%);
+        color: #FFFFFF;
+      }
+      &:active {
+        background-color: darken(#D9534F, 20%);
+        color: #FFFFFF;
+      }
     }
   }
 }

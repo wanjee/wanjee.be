@@ -1,5 +1,5 @@
 /**
- * Adapt header color to section
+ * Adapt header style to section
  */
 $('#navigation-main').on('activate.bs.scrollspy', function () {
     if ($(this).find('li.active a').attr('href') == '#hero') {
@@ -43,8 +43,6 @@ function hasScrolled() {
         return;
     }
 
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is 'behind' the navbar.
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('nav.navbar').removeClass('nav-visible').addClass('nav-hidden');
