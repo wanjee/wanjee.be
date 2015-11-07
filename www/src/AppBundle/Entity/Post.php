@@ -714,7 +714,7 @@ class Post implements \JsonSerializable
             'summary' => $this->summary,
             'content' => $this->content,
             'image' => $this->image,
-            'publishedAt' => $this->publishedAt,
+            'publishedAt' => $this->publishedAt->format(\DateTime::ISO8601),
         );
     }
 }

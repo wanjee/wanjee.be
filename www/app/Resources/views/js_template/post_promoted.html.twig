@@ -1,22 +1,24 @@
-<script id="post-short-template" type="text/template">
-    <article class="post">
-        <div class="meta">
-            <time datetime="2015-09-24"><%= date %></time>
-        </div>
+<script id="post-promoted-item-template" type="text/template">
+    <div class="col-md-6 col-lg-4">
+        <article class="post">
+            <div class="meta">
+                <time datetime="2015-09-24"><%= publishedAt %></time>
+            </div>
 
-        <div class="img-container">
-            <a class="img" style="background-image:url(<%= image %>);" href="#"></a>
-        </div>
+            <div class="img-container">
+                <a class="img" style="background-image:url(http://placehold.it/400x200);" href="#"></a>
+            </div>
 
-        <div class="copy-container">
-            <div class="copy">
-                <h2><a href="#!/post/<%= slug %>"><%= title %></a></h2>
+            <div class="copy-container">
+                <div class="copy">
+                    <h2><a href="#!/post/1"><%= title %></a></h2>
 
-                <div class="excerpt">
-                    <%= summary %>
+                    <div class="excerpt">
+                        <%= summary %>
+                    </div>
                 </div>
             </div>
-        </div>
-        <a class="link" href="#!/post/<%= slug %>">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-    </article>
+            <a class="link" href="#!/post/<%= slug %>">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+        </article>
+    </div>
 </script>

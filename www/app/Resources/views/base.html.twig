@@ -24,14 +24,14 @@
 
 {% include 'partial/footer.html.twig' %}
 
-{% block javascripts %}
-    <script src="{{ asset('js/vendors.min.js') }}"></script>
-    <script src="{{ asset('js/app.min.js') }}"></script>
-{% endblock %}
-
 {% block javascripts_templates %}
     <!-- Templates -->
     {% include 'js_template/post_promoted.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/vendors.min.js') }}"></script>
+    <script src="{{ asset('js/app.min.js') }}"></script>
 {% endblock %}
 
 </body>

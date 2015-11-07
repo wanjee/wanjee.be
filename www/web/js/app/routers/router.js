@@ -5,14 +5,26 @@ var app = app || {};
 
     var Router = Backbone.Router.extend({
         routes: {
-            '' : 'home',
-            'posts' : 'posts',
-            'posts/:slug' : 'post',
+            '' : 'homeAction',
+            'posts' : 'postsAction',
+            'posts/:slug' : 'postAction',
 
-            home : function() {
+            homeAction : function() {
+                /*
                 app.Posts.fetch();
 
-                //$('body').html(new PostListView({collection: app.Posts}).render().el)
+                $('body').html(new PostListView({collection: app.Posts}).render().el)
+                */
+                console.log('homeAction');
+            },
+
+            postsAction : function() {
+                /*
+                app.Posts.fetch();
+                */
+
+                console.log('postsAction');
+
             }
         }
     });

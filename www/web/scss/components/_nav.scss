@@ -2,10 +2,10 @@ nav {
   &.navbar {
     transition: all 0.2s ease-in-out 0s;
 
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.65);
 
     &.transparent {
-      background: none;
+      background-color: rgba(0, 0, 0, 0.25);
 
       .navbar-brand {
         display: none;
