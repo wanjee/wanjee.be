@@ -2,7 +2,7 @@
     <div class="col-md-6 col-lg-4">
         <article class="post">
             <div class="meta">
-                <time datetime="2015-09-24"><%= publishedAt %></time>
+                <time datetime="<%= _.template.formatDateRFC3339(publishedAt) %>"><%= _.template.formatDateShort(publishedAt) %></time>
             </div>
 
             <div class="img-container">
