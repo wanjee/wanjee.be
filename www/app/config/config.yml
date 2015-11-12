@@ -75,6 +75,10 @@ liip_imagine:
 
     filter_sets:
         cache: ~
+        promoted_post:
+            quality: 75
+            filters:
+                thumbnail: { size: [400, 200], mode: outbound }
 
 services:
     twig.extension.text:
