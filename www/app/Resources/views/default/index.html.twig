@@ -26,10 +26,12 @@
                 practices in general.
             </div>
             <div id="post-promoted" class="row">
-                <div class="loader"></div>
+                {% for post in posts %}
+                    {% include 'post/promoted.html.twig' with {'post' : post} %}
+                {% endfor %}
             </div>
             <p class="text-center">
-                <a class="btn btn-primary" href="#!/posts">See all posts</a>
+                <a class="btn btn-primary" href="#/posts">See all posts</a>
             </p>
         </div>
     </section>
@@ -111,7 +113,7 @@
             </div>
 
             <p class="text-center">
-                <a class="btn btn-primary" href="#!/shuwee">Discover Shuwee</a>
+                <a class="btn btn-primary" href="#/shuwee">Discover Shuwee</a>
             </p>
         </div>
     </section>

@@ -18,15 +18,26 @@
 
 <body data-spy="scroll" data-target="#navigation-main">
 
-{% include 'partial/navbar.html.twig' %}
+<div id="pages-container">
 
-{% block content %}{% endblock %}
+    <div id="page-primary">
+        {% include 'partial/navbar.html.twig' %}
 
-{% include 'partial/footer.html.twig' %}
+        {% block content %}{% endblock %}
+
+        {% include 'partial/footer.html.twig' %}
+    </div>
+
+    <div id="page-secondary" class="page"></div>
+
+</div>
+
 
 {% block javascripts_templates %}
     <!-- Templates -->
-    {% include 'js_template/post_promoted.html.twig' %}
+    {% include 'js_template/post_details.html.twig' %}
+    {% include 'js_template/post_list.html.twig' %}
+    {% include 'js_template/post_teaser.html.twig' %}
 {% endblock %}
 
 {% block javascripts %}

@@ -13,8 +13,23 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        $filters = array(
+            'status' => true,
+        );
+
+        $order = array(
+            'publishedAt' => 'DESC',
+        );
+
+        $em = $this->getDoctrine()->getManager();
+
+        $posts = $em->getRepository('AppBundle:Post')->findBy($filters, $order, 3);
+
         $response = $this->render(
-            'default/index.html.twig'
+            'default/index.html.twig',
+            array(
+                'posts' => $posts,
+            )
         );
 
         $response->setPublic();
