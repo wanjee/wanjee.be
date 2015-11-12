@@ -61,13 +61,13 @@ module.exports = function (grunt) {
             app: {
                 files: {
                     'web/js/app.min.js': [
+                        'web/js/app/main.js',
                         'web/js/app/utils/date.js',
                         'web/js/app/models/post.js',
                         'web/js/app/collections/posts.js',
-                        'web/js/app/routers/router.js',
                         'web/js/app/views/app.js',
                         'web/js/app/views/post.js',
-                        'web/js/app/main.js',
+                        'web/js/app/routers/router.js',
                         'web/js/app/effects.js'
                     ]
                 }

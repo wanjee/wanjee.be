@@ -1,47 +1,43 @@
 var app = app || {};
+app.Views = app.Views || {};
 
 (function ($) {
     'use strict';
 
-    // The Application
-    // ---------------
-
-    // Our overall **AppView** is the top-level piece of UI.
-    app.AppView = Backbone.View.extend({
-        el: '#post-promoted',
-
-        template: _.template($('#post-promoted-item-template').html()),
+    app.Views.App = Backbone.View.extend({
+        el: '#page-secondary',
 
         /**
          * Initialize
          */
         initialize: function() {
             // Once posts are fetched fill in the teaser section with latest promoted
-            app.Posts.on('reset', this.addPromotedPosts, this);
 
-            app.Posts.fetch({reset: true});
-
-            this.render();
         },
 
-        /**
-         * Get latest posts and promote them on homepage
-         */
-        addPromotedPosts: function() {
-            // list of post is ordered by date desc, so lasts are firsts
-            var lastPosts = app.Posts.first(3);
-            this.$el.html('');
-            _.each(lastPosts, this.addSinglePromotedPost, this);
-        },
+        go: function(view) {
+            var previous = this.currentPage || null;
+            var next = view || null;
 
-        /**
-         * Render a single post and append it to $el
-         * @param post
-         */
-        addSinglePromotedPost: function(post) {
-            var view = new app.PromotedPostView({model: post});
-            this.$el.append(view.render().el);
+            if (previous) {
+                console.log('remove previous');
+                previous.remove();
+                /*
+                previous.transitionOut(function () {
+                    previous.remove();
+                });*/
+            }
+
+            if (next) {
+                console.log('render next');
+                next.render({ page: true });
+                this.$el.append( next.$el );
+                //next.transitionIn();
+            }
+
+            this.currentPage = next;
         }
     });
 
+    app.instance = new app.Views.App();
 })(jQuery);

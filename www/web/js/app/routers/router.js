@@ -3,32 +3,38 @@ var app = app || {};
 (function () {
     'use strict';
 
-    var Router = Backbone.Router.extend({
+    app.Router = Backbone.Router.extend({
         routes: {
-            '' : 'homeAction',
-            'posts' : 'postsAction',
-            'posts/:slug' : 'postAction',
+            '': 'homeAction',
+            'posts': 'postsAction',
+            'posts/:slug': 'postAction'
+        },
 
-            homeAction : function() {
-                /*
-                app.Posts.fetch();
+        initialize: function () {
+            //app.instance = new app.Views.App();
+        },
 
-                $('body').html(new PostListView({collection: app.Posts}).render().el)
-                */
-                console.log('homeAction');
-            },
+        homeAction : function() {
+            console.log('homeAction');
 
-            postsAction : function() {
-                /*
-                app.Posts.fetch();
-                */
+            app.instance.go();
+        },
 
-                console.log('postsAction');
+        postsAction : function() {
+            console.log('postsAction');
 
-            }
+            var PostListView = new app.Views.PostList();
+            app.instance.go(PostListView);
+        },
+
+        postAction: function(slug) {
+            console.log('postACtion ' + slug);
+
+            var PostDetailsView = new app.Views.PostDetails({'slug': slug});
+            app.instance.go(PostDetailsView);
         }
     });
 
-    app.Router = new Router();
+    app.router = new app.Router();
     Backbone.history.start();
 })();

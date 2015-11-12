@@ -1,26 +1,52 @@
 var app = app || {};
+app.Views = app.Views || {};
 
 (function ($) {
     'use strict';
 
-    app.PromotedPostView = Backbone.View.extend({
-        tagname: 'li',
-        template: _.template($('#post-promoted-item-template').html()),
+    app.Views.PostList = Backbone.View.extend({
+        classname: 'post-list',
+        template: _.template($('script[name=post-list]').html()),
+
+        /*
+        initialize: function() {
+            app.Posts.fetch({reset: true});
+
+            this.render();
+        },
+        */
 
         render: function() {
-            this.$el.html(this.template(this.model.toJSON()));
+            this.$el.html('PostList');
             return this;
         }
+
     });
 
-    app.SinglePostView = Backbone.View.extend({
-        tagname: 'li',
+    app.Views.PostTeaser = Backbone.View.extend({
+        classname: 'post-teaser',
+        template: _.template($('script[name=post-teaser]').html()),
+
         render: function() {
-            $this.$el.html(this.model.get('title'));
+            this.$el.html('PostTeaser');
             return this;
         }
 
+    });
 
+    app.Views.PostDetails = Backbone.View.extend({
+        classname: 'post-details',
+        template: _.template($('script[name=post-details]').html()),
+
+        initialize: function() {
+
+            this.render();
+        },
+
+        render: function() {
+            this.$el.html('PostDetails');
+            return this;
+        }
     });
 
 }(jQuery));
