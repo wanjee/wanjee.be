@@ -5,8 +5,13 @@ app.Views = app.Views || {};
     'use strict';
 
     app.Views.Home = Backbone.View.extend({
+        className: 'home',
+        template: _.template($('script[name=home]').html()),
 
-
+        render: function() {
+            this.$el.html(this.template());
+            return this;
+        }
     });
 
 }(jQuery));

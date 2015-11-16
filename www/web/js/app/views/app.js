@@ -5,37 +5,42 @@ app.Views = app.Views || {};
     'use strict';
 
     app.Views.App = Backbone.View.extend({
-        el: '#page-secondary',
+        el: '#page',
+        currentPage: null,
 
-        /**
-         * Initialize
-         */
         initialize: function() {
-            // Once posts are fetched fill in the teaser section with latest promoted
 
         },
 
-        go: function(view) {
+        goToPage: function (view) {
+
             var previous = this.currentPage || null;
-            var next = view || null;
+            var next = view;
 
             if (previous) {
-                console.log('remove previous');
-                previous.remove();
-                /*
-                previous.transitionOut(function () {
+                previous.$el.removeClass('isVisible');
+
+                var self = this;
+                _.delay(function() {
+                    // transitionEnd event does not always trigger
                     previous.remove();
-                });*/
-            }
+console.log('has been removed');
+                    next.render();
+                    self.$el.append( next.$el );
+                    next.$el.addClass('isVisible');
+                    self.currentPage = next;
 
-            if (next) {
-                console.log('render next');
-                next.render({ page: true });
+                }, 500); // match delay with the animation delay
+            }
+            else {
+                // do it immediately
+                console.log('direct');
+                next.render();
                 this.$el.append( next.$el );
-                //next.transitionIn();
+                next.$el.addClass('isVisible');
+                this.currentPage = next;
             }
 
-            this.currentPage = next;
         }
     });
 

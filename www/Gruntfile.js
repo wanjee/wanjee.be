@@ -66,6 +66,7 @@ module.exports = function (grunt) {
                         'web/js/app/models/post.js',
                         'web/js/app/collections/posts.js',
                         'web/js/app/views/app.js',
+                        'web/js/app/views/home.js',
                         'web/js/app/views/post.js',
                         'web/js/app/routers/router.js',
                         'web/js/app/effects.js'

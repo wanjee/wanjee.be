@@ -5,46 +5,52 @@ app.Views = app.Views || {};
     'use strict';
 
     app.Views.PostList = Backbone.View.extend({
-        classname: 'post-list',
+        className: 'post-list',
         template: _.template($('script[name=post-list]').html()),
 
-        /*
         initialize: function() {
             app.Posts.fetch({reset: true});
-
-            this.render();
         },
-        */
 
         render: function() {
-            this.$el.html('PostList');
+            this.$el.html(this.template());
             return this;
         }
 
     });
 
     app.Views.PostTeaser = Backbone.View.extend({
-        classname: 'post-teaser',
+        className: 'post-teaser',
         template: _.template($('script[name=post-teaser]').html()),
 
         render: function() {
-            this.$el.html('PostTeaser');
+            this.$el.html(this.template());
             return this;
         }
 
     });
 
     app.Views.PostDetails = Backbone.View.extend({
-        classname: 'post-details',
+        className: 'post-details',
         template: _.template($('script[name=post-details]').html()),
 
-        initialize: function() {
-
-            this.render();
+        initialize: function (options) {
+    /*
+            var self = this;
+            this.options = options || {};
+            this.post = new app.Post({ 'slug': this.options.slug});
+            this.post.slug = this.options.slug;
+            this.post.fetch({
+                success: function() {
+                    self.render();
+                }
+            });
+            */
+            //console.log(this.post);
         },
 
         render: function() {
-            this.$el.html('PostDetails');
+            this.$el.html(this.template());
             return this;
         }
     });

@@ -2,12 +2,14 @@
  * Adapt header style to section
  */
 $('#navigation-main').on('activate.bs.scrollspy', function () {
+    /*
     if ($(this).find('li.active a').attr('href') == '#hero') {
         $('nav.navbar').addClass('transparent');
     }
     else {
         $('nav.navbar').removeClass('transparent');
     }
+    */
 });
 
 
@@ -55,20 +57,3 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
-
-/**
- * Smooth scrolling
- */
-$('a[href*=#]:not([href=#]):not([href^="#/"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
-
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-            $('html,body').animate({
-                scrollTop: target.offset().top
-            }, 1000);
-            return false;
-        }
-    }
-});

@@ -12,6 +12,16 @@ var app = app || {};
             content: '',
             image: '',
             publishedAt: ''
+        },
+        urlRoot: '/posts',
+
+        initialize: function(options) {
+            //this.slug = options.slug;
+        },
+
+        fetchBySlug: function(){
+            this.fetch(/*{ data: $.param({ slug: this.slug }) }*/)
         }
+
     });
 })();
