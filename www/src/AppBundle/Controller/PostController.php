@@ -14,11 +14,75 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class PostController extends Controller
 {
     /**
-     * @Route("/posts")
+     * @Route("/posts", name="posts_index")
      *
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function getPostsAction(Request $request)
+    {
+        // load all posts
+        $filters = array(
+            'status' => true,
+        );
+
+        $order = array(
+            'publishedAt' => 'DESC',
+        );
+
+        $em = $this->getDoctrine()->getManager();
+
+        $posts = $em->getRepository('AppBundle:Post')->findBy($filters, $order);
+
+        $response = $this->render(
+            'post/index.html.twig',
+            array(
+                'posts' => $posts,
+            )
+        );
+
+        $response->setPublic();
+        $response->setMaxAge(900); // 15 minutes
+
+        return $response;
+    }
+
+    /**
+     * @Route("/posts/{slug}", name="post_details")
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @param string $slug
+     *
+     * @return JsonResponse|NotFoundHttpException
+     */
+    public function getPostAction(Request $request, $slug)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $post = $em->getRepository('AppBundle:Post')->findOneBy(array('slug' => $slug));
+
+        if (!$post) {
+            throw $this->createNotFoundException();
+        }
+
+        $response = $this->render(
+            'post/details.html.twig',
+            array(
+                'post' => $post,
+            )
+        );
+
+        $response->setPublic();
+        $response->setMaxAge(900); // 15 minutes
+
+        return $response;
+    }
+
+    /**
+     * @Route("/api/posts")
+     *
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     */
+    public function getPostsJSONAction(Request $request)
     {
         // load all posts
         $filters = array(
@@ -51,14 +115,14 @@ class PostController extends Controller
     }
 
     /**
-     * @Route("/posts/{slug}")
+     * @Route("/api/posts/{slug}")
      *
      * @param \Symfony\Component\HttpFoundation\Request $request
      * @param string $slug
      *
      * @return JsonResponse|NotFoundHttpException
      */
-    public function getPostAction(Request $request, $slug)
+    public function getPostJSONAction(Request $request, $slug)
     {
         $em = $this->getDoctrine()->getManager();
 

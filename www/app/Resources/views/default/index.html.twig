@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
+{% block body_class %}home{% endblock %}
+
 {% block content %}
     <section class="slide" id="hero" data-navbar-style="hero">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="vcenter hero-content-inner">
+                    <div class="hero-content-inner">
                         <h1>Wanjee</h1>
                         <h2>Web artisan</h2>
                         <div class="actions-wrapper">
@@ -18,7 +20,7 @@
         </div>
     </section>
 
-    <section class="slide container-fluid" id="blog">
+    <section class="slide" id="blog">
         <div class="container">
             <h1>To quality and beyond</h1>
 
@@ -27,11 +29,13 @@
             </div>
             <div id="post-promoted" class="row">
                 {% for post in posts %}
-                    {% include 'post/promoted.html.twig' with {'post' : post} %}
+                    <div class="col-md-6 col-lg-4">
+                        {% include 'post/teaser.html.twig' with {'post' : post} %}
+                    </div>
                 {% endfor %}
             </div>
             <p class="text-center">
-                <a class="btn btn-primary" href="#/posts">See all posts</a>
+                <a class="btn btn-primary" href="{{ path('posts_index') }}">See all posts</a>
             </p>
         </div>
     </section>

@@ -1,0 +1,23 @@
+{% set postUrl = path('post_details', {'slug': post.slug}) %}
+
+<article class="post teaser">
+    <div class="meta">
+        <time datetime="{{ post.publishedAt | date('Y-m-d\\TH:i:sP') }}">{{ post.publishedAt | date('d-m-Y') }}</time>
+    </div>
+
+    <div class="img-container">
+        <a class="img" style="background-image:url({{ post.webPath | imagine_filter('promoted_post') }});"
+           href="{{ postUrl }}"></a>
+    </div>
+
+    <div class="copy-container">
+        <div class="copy">
+            <h2><a href="{{ postUrl }}">{{ post.title }}</a></h2>
+
+            <div class="excerpt">
+                {{ post.summary }}
+            </div>
+        </div>
+    </div>
+    <a class="link" href="{{ postUrl }}">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+</article>

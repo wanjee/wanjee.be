@@ -11,19 +11,25 @@
     height: 100%;
     color: #F9F9F9;
 
-    h1 {
-      text-align: center;
-      margin: 0 auto 10px;
-      padding: 0;
-      font-size: 42px;
-    }
+    .hero-content-inner {
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
 
-    h2 {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0;
-      font-size: 36px;
+      h1 {
+        text-align: center;
+        margin: 0 auto 10px;
+        padding: 0;
+        font-size: 42px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        font-size: 36px;
+      }
     }
 
     > div {
@@ -32,10 +38,6 @@
       .actions-wrapper {
         text-align: center;
         margin: 80px 0 40px 0;
-
-        a.btn {
-
-        }
       }
     }
   }
@@ -44,8 +46,6 @@
 /**
  * Animations
  */
-.loaded {
-
 #hero {
   h1,
   h2,
@@ -71,7 +71,6 @@
     animation-duration: 0.6s;
     animation-delay: 0.7s;
   }
-}
 }
 
 @keyframes bounce-right {

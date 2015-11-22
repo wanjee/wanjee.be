@@ -16,23 +16,15 @@
     {% endblock %}
 </head>
 
-<body data-spy="scroll" data-target="#navigation-main">
+<body data-spy="scroll" data-target="#navigation-main" class="{% block body_class %}{% endblock %}">
 
 {% include 'partial/navbar.html.twig' %}
 
-<section id="page"></section>
+<div class="page">
+    {% block content %}{% endblock %}
+</div>
 
 {% include 'partial/footer.html.twig' %}
-
-<div id="page-loader"><div class="loader"></div></div>
-
-{% block javascripts_templates %}
-    <!-- Templates -->
-    {% include 'js_template/home.html.twig' with {'posts': posts } only %}
-    {% include 'js_template/post_details.html.twig' %}
-    {% include 'js_template/post_list.html.twig' %}
-    {% include 'js_template/post_teaser.html.twig' %}
-{% endblock %}
 
 {% block javascripts %}
     <script src="{{ asset('js/vendors.min.js') }}"></script>
