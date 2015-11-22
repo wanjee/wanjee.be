@@ -44,6 +44,8 @@
 /**
  * Animations
  */
+.loaded {
+
 #hero {
   h1,
   h2,
@@ -69,6 +71,7 @@
     animation-duration: 0.6s;
     animation-delay: 0.7s;
   }
+}
 }
 
 @keyframes bounce-right {

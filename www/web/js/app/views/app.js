@@ -9,7 +9,6 @@ app.Views = app.Views || {};
         currentPage: null,
 
         initialize: function() {
-
         },
 
         goToPage: function (view) {
@@ -24,7 +23,6 @@ app.Views = app.Views || {};
                 _.delay(function() {
                     // transitionEnd event does not always trigger
                     previous.remove();
-console.log('has been removed');
                     next.render();
                     self.$el.append( next.$el );
                     next.$el.addClass('isVisible');
@@ -34,7 +32,6 @@ console.log('has been removed');
             }
             else {
                 // do it immediately
-                console.log('direct');
                 next.render();
                 this.$el.append( next.$el );
                 next.$el.addClass('isVisible');

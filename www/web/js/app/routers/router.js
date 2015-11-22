@@ -11,6 +11,15 @@ var app = app || {};
         },
 
         initialize: function () {
+            app.Posts.on('reset', function () {
+                Backbone.history.start();
+
+                _.delay(function() {
+                    $('body').addClass('loaded');
+
+                }, 1000);
+            });
+            app.Posts.fetch({reset: true});
         },
 
         homeAction : function() {
@@ -30,12 +39,11 @@ var app = app || {};
     });
 
     app.router = new app.Router();
-    Backbone.history.start();
 
     /**
      * Smooth scrolling & ensure menu anchor heads to homepage before scrolling
      */
-    $('a[href*=#]:not([href=#]):not([href^="#/"])').click(function() {
+    $('body').delegate('a[href*=#]:not([href=#]):not([href^="#/"])', 'click', (function() {
 
         // first navigate to home if we are not already on it
         if (!$('#page > div').hasClass('home')) {

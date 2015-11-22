@@ -9,25 +9,36 @@ app.Views = app.Views || {};
         template: _.template($('script[name=post-list]').html()),
 
         initialize: function() {
-            app.Posts.fetch({reset: true});
         },
 
         render: function() {
-            this.$el.html(this.template());
+            if (this.$el) {
+                this.$el.empty();
+            }
+
+            var self = this;
+
+            app.Posts.each(function(post) {
+                var view = new app.Views.PostTeaser({model: post});
+                self.$el.append(view.el);
+            });
+
             return this;
         }
-
     });
 
     app.Views.PostTeaser = Backbone.View.extend({
         className: 'post-teaser',
         template: _.template($('script[name=post-teaser]').html()),
 
+        initialize: function() {
+            this.render();
+        },
+
         render: function() {
-            this.$el.html(this.template());
+            this.$el.html(this.template(this.model.toJSON()));
             return this;
         }
-
     });
 
     app.Views.PostDetails = Backbone.View.extend({
