@@ -61,5 +61,5 @@ var app = app || {};
                 return false;
             }
         }
-    });
+    }));
 })();
