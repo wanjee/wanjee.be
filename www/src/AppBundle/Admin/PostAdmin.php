@@ -1,6 +1,7 @@
 <?php
 namespace AppBundle\Admin;
 
+use Symfony\Bundle\FrameworkBundle\Routing\Router;
 use Wanjee\Shuwee\AdminBundle\Admin\Admin;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Datagrid;
 
@@ -11,6 +12,17 @@ use Wanjee\Shuwee\AdminBundle\Datagrid\Datagrid;
  */
 class PostAdmin extends Admin
 {
+    private $router;
+
+    /**
+     *
+     */
+    function __construct(Router $router)
+    {
+        parent::__construct();
+        $this->router = $router;
+    }
+
     /**
      * Return the main admin form for this content.
      *
@@ -105,7 +117,7 @@ class PostAdmin extends Admin
     public function getOptions() {
         return array(
             'preview_url_callback' => function ($entity) {
-                return $entity->getId();
+                return $this->router->generate('post_details', array('slug' => $entity->getSlug()));
             },
         );
     }
