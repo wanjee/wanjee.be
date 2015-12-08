@@ -1,11 +1,3 @@
 services:
     markdown:
         class: AppBundle\Utils\Markdown
-
-
-    app.twig.app_extension:
-        class:     AppBundle\Twig\AppExtension
-        arguments: ["@markdown"]
-        public:    false
-        tags:
-            - { name: twig.extension }
