@@ -4,23 +4,23 @@
 
 {% block content %}
     <section class="container">
-        <article class="post">
+        <article class="post col-md-12">
             <h1>{{ post.title }}</h1>
+            <div class="meta">
+                <time datetime="{{ post.publishedAt | date('c') }}">{{ post.publishedAt | date('F j, Y') }}</time>
+            </div>
 
             <div class="excerpt">
                 {{ post.summary }}
             </div>
 
-            <div class="img-container">
-                <a class="img" style="background-image:url({{ post.webPath | imagine_filter('promoted_post') }});"></a>
+            {% if post.webPath %}
+            <div class="img-container" style="background-image:url({{ asset(post.webPath) }});">
             </div>
+            {% endif %}
 
             <div class="body">
                 {{ post.content | md2html }}
-            </div>
-
-            <div class="meta">
-                <time datetime="{{ post.publishedAt | date('Y-m-d\\TH:i:sP') }}">{{ post.publishedAt | date('d-m-Y') }}</time>
             </div>
 
         </article>
