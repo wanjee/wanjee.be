@@ -1,20 +1,5 @@
-/**
- * Adapt header style to section
- */
-$('#navigation-main').on('activate.bs.scrollspy', function () {
-    /*
-    if ($(this).find('li.active a').attr('href') == '#hero') {
-        $('nav.navbar').addClass('transparent');
-    }
-    else {
-        $('nav.navbar').removeClass('transparent');
-    }
-    */
-});
-
-
-/**
- * Hide Header on scroll down, show on scroll up
+/*
+ * Hide Header on scroll down, show it on scroll up
  */
 var didScroll;
 var lastScrollTop = 0;
@@ -58,6 +43,9 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
+/*
+ * Smooth scrolling
+ */
 $('body').delegate('a[href*=#]:not([href=#])', 'click', (function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
 
@@ -71,3 +59,19 @@ $('body').delegate('a[href*=#]:not([href=#])', 'click', (function() {
         }
     }
 }));
+
+/*
+ * Consistent height for posts containers on home page
+ */
+$(document).ready(function(){
+    $('#post-promoted').each(function(){
+        var highestBox = 0;
+        $('.post.teaser .copy', this).each(function(){
+            if($(this).height() > highestBox) {
+                highestBox = $(this).height();
+            }
+        });
+
+        $('.post.teaser .copy',this).height(highestBox);
+    });
+});
