@@ -3,6 +3,10 @@
 namespace AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -22,7 +26,7 @@ class PostType extends AbstractType
             ->add('title')
             ->add(
                 'summary',
-                'textarea',
+                TextareaType::class,
                 array(
                     'help' => 'Short introduction.  Keep it simple and short.',
                     'group' => 'Content',
@@ -30,7 +34,7 @@ class PostType extends AbstractType
             )
             ->add(
                 'content',
-                'textarea',
+                TextareaType::class,
                 array(
                     'attr' => array('rows' => 20),
                     'markdown' => true,
@@ -39,7 +43,7 @@ class PostType extends AbstractType
             )
             ->add(
                 'file',
-                'file',
+                FileType::class,
                 array(
                     'label' => 'Image',
                     'required' => false,
@@ -49,7 +53,7 @@ class PostType extends AbstractType
             )
             ->add(
                 'publishedAt',
-                'datetime',
+                DateTimeType::class,
                 array(
                     'widget' => 'choice',
                     'group' => 'Meta',
@@ -57,7 +61,7 @@ class PostType extends AbstractType
             )
             ->add(
                 'status',
-                'checkbox',
+                CheckboxType::class,
                 array(
                     'label' => 'Published',
                     'required' => false,
