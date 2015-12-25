@@ -6,6 +6,13 @@ services:
         tags:
           -  { name: shuwee.admin, alias: post }
 
+    appbundle.block_admin:
+        class: AppBundle\Admin\BlockAdmin
+        arguments: [@router]
+        parent: shuwee_admin.admin_abstract
+        tags:
+          -  { name: shuwee.admin, alias: block }
+
     appbundle.twig.app_extension:
         class:     AppBundle\Twig\AppExtension
         arguments: ["@markdown"]

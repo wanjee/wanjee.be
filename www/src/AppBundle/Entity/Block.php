@@ -8,14 +8,14 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Class Post
+ * Class Block
  * @package AppBundle\Entity
  *
- * @ORM\Table(name="post")
- * @ORM\Entity(repositoryClass="AppBundle\Entity\Repository\PostRepository")
+ * @ORM\Table(name="block")
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\Repository\BlockRepository")
  * @ORM\HasLifecycleCallbacks
  */
-class Post implements \JsonSerializable
+class Block implements \JsonSerializable
 {
     /**
      * @ORM\Id
@@ -31,22 +31,10 @@ class Post implements \JsonSerializable
     private $title;
 
     /**
-     * @Gedmo\Slug(fields={"title"}, updatable=true, unique=true )
-     * @ORM\Column(length=128, unique=true)
-     */
-    private $slug;
-
-    /**
-     * @ORM\Column(type="string")
-     * @Assert\NotBlank(message="Give your post a summary!")
-     */
-    private $summary;
-
-    /**
      * @ORM\Column(type="text")
      * @Assert\Length(
      *     min = "10",
-     *     minMessage = "Post content is too short ({{ limit }} characters minimum)"
+     *     minMessage = "Block content is too short ({{ limit }} characters minimum)"
      * )
      */
     private $content;
@@ -57,10 +45,9 @@ class Post implements \JsonSerializable
     private $image;
 
     /**
-     * @ORM\Column(type="datetime")
-     * @Assert\DateTime()
+     * @ORM\Column(type="string", length=60)
      */
-    private $publishedAt;
+    private $caption;
 
     /**
      * @var boolean
@@ -68,6 +55,20 @@ class Post implements \JsonSerializable
      * @ORM\Column(name="status", type="boolean")
      */
     private $status;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="promoted", type="boolean")
+     */
+    private $promoted;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="weight")
+     */
+    private $weight = 0;
 
     /**
      * Not mapped, used for $this->image upload
@@ -87,15 +88,7 @@ class Post implements \JsonSerializable
      * Not mapped, used for $this->image upload
      * @var string
      */
-    protected $path = 'posts';
-
-    /**
-     *
-     */
-    public function __construct()
-    {
-        $this->publishedAt = new \DateTime();
-    }
+    protected $path = 'blocks';
 
     /**
      * @return mixed
@@ -119,14 +112,6 @@ class Post implements \JsonSerializable
     public function setTitle($title)
     {
         $this->title = $title;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSlug()
-    {
-        return $this->slug;
     }
 
     /**
@@ -160,11 +145,28 @@ class Post implements \JsonSerializable
     {
         $this->image = $image;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCaption()
+    {
+        return $this->caption;
+    }
+
+    /**
+     * @param mixed $caption
+     */
+    public function setCaption($caption)
+    {
+        $this->caption = $caption;
+    }
+
     /**
      * Set path
      *
      * @param string $path
-     * @return Post
+     * @return Block
      */
     public function setPath($path)
     {
@@ -257,38 +259,6 @@ class Post implements \JsonSerializable
     }
 
     /**
-     * @return \DateTime
-     */
-    public function getPublishedAt()
-    {
-        return $this->publishedAt;
-    }
-
-    /**
-     * @param $publishedAt
-     */
-    public function setPublishedAt($publishedAt)
-    {
-        $this->publishedAt = $publishedAt;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSummary()
-    {
-        return $this->summary;
-    }
-
-    /**
-     * @param $summary
-     */
-    public function setSummary($summary)
-    {
-        $this->summary = $summary;
-    }
-
-    /**
      * @return boolean
      */
     public function isStatus()
@@ -302,6 +272,38 @@ class Post implements \JsonSerializable
     public function setStatus($status)
     {
         $this->status = $status;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isPromoted()
+    {
+        return $this->promoted;
+    }
+
+    /**
+     * @param boolean $promoted
+     */
+    public function setPromoted($promoted)
+    {
+        $this->promoted = $promoted;
+    }
+
+    /**
+     * @return int
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * @param int $weight
+     */
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
     }
 
     /**
@@ -709,12 +711,10 @@ class Post implements \JsonSerializable
     {
         return array(
             'id' => $this->id,
-            'slug' => $this->slug,
             'title' => $this->title,
-            'summary' => $this->summary,
             'content' => $this->content,
             'image' => $this->image,
-            'publishedAt' => $this->publishedAt->format(\DateTime::ISO8601),
+            'promoted' => $this->promoted,
         );
     }
 }
