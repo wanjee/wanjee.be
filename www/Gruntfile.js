@@ -28,7 +28,8 @@ module.exports = function (grunt) {
                 files: {
                     'web/css/vendors.min.css': [
                         // do not use *.js as order is important
-                        'web/css/vendors/bootstrap.min.css'
+                        'web/css/vendors/bootstrap.min.css',
+                        'web/css/vendors/prism.css'
                     ]
                 }
             }
@@ -61,7 +62,6 @@ module.exports = function (grunt) {
             app: {
                 files: {
                     'web/js/app.min.js': [
-                        'web/js/app/main.js',
                         'web/js/app/effects.js'
                     ]
                 }
@@ -70,7 +70,8 @@ module.exports = function (grunt) {
                 files: {
                     'web/js/vendors.min.js': [
                         'web/js/vendors/jquery.min.js',
-                        'web/js/vendors/bootstrap.min.js'
+                        'web/js/vendors/bootstrap.min.js',
+                        'web/js/vendors/prism.js'
                     ]
                 }
             }
