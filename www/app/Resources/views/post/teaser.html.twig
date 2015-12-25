@@ -2,11 +2,11 @@
 
 <article class="post teaser">
     <div class="meta">
-        <time datetime="{{ post.publishedAt | date('Y-m-d\\TH:i:sP') }}">{{ post.publishedAt | date('d-m-Y') }}</time>
+        <time datetime="{{ post.publishedAt | date('c') }}">{{ post.publishedAt | date('F j, Y') }}</time>
     </div>
 
     <div class="img-container">
-        <a class="img" style="background-image:url({{ post.webPath | imagine_filter('promoted_post') }});"
+        <a class="img" style="background-image:url({{ post.webPath | imagine_filter('post_promoted') }});"
            href="{{ postUrl }}"></a>
     </div>
 
