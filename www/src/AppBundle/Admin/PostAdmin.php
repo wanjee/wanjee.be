@@ -31,7 +31,7 @@ class PostAdmin extends Admin
     public function getForm()
     {
         // Must return a fully qualified class name
-        return 'AppBundle\Form\PostType';
+        return 'AppBundle\Form\Type\PostType';
     }
 
     /**
