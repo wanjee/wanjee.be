@@ -137,6 +137,18 @@ a {
   content: "\e90b"; }
 
 /* Components */
+.row.feature {
+  margin-top: 80px;
+  margin-bottom: 80px; }
+  .row.feature .description {
+    padding: 20px 30px;
+    text-align: left; }
+  .row.feature figure img {
+    max-width: 100%;
+    height: auto; }
+  .row.feature figure figcaption {
+    font-size: 12px; }
+
 .loader {
   width: 80px;
   height: 80px;
@@ -393,17 +405,6 @@ body.home .page {
 #shuwee {
   background-color: #F9F9F9;
   text-align: center; }
-  #shuwee .row.feature {
-    margin-top: 80px;
-    margin-bottom: 80px; }
-    #shuwee .row.feature .description {
-      padding: 20px 30px;
-      text-align: left; }
-    #shuwee .row.feature figure img {
-      max-width: 100%;
-      height: auto; }
-    #shuwee .row.feature figure figcaption {
-      font-size: 12px; }
 
 .post-details .post {
   padding-top: 40px;

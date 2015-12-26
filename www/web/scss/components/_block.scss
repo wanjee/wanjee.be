@@ -1,0 +1,22 @@
+.row {
+  &.feature {
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    .description {
+      padding: 20px 30px;
+      text-align: left;
+    }
+
+    figure {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      figcaption {
+        font-size: 12px;
+      }
+    }
+  }
+}
