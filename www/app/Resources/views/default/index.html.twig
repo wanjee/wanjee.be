@@ -71,53 +71,12 @@
                 Shuwee is aimed to manage website data in a <abbr title="Keep it simple, stupid">KISS</abbr> way.
             </div>
 
-            <div class="row feature">
-                <div class="col-xs-12 col-md-6 description">
-                    <h2>Stupidly simple !</h2>
-                    <p>
-                        An simple <abbr title="User Interface">UI</abbr> helps users focus on tasks they need to accomplish.
-                        That's why Shuwee focus only on the most common tasks.
-                    </p>
-                    <p>
-                        The more simplicity, the more efficiency.
-                    </p>
-
-                </div>
-                <figure class="col-xs-12 col-md-6">
-                    <img src="http://placehold.it/670x380">
-                    <figcaption class="figure-caption">Clean content overview</figcaption>
-                </figure>
-            </div>
-            <div class="row feature">
-                <div class="col-xs-12 col-md-6 col-md-push-6 description">
-                    <h2>What's in the box ?</h2>
-
-                    <h3>Efficiency</h3>
-                    <p>
-                        <abbr title="Create, Read, Update, Delete">CRUD</abbr> operations,
-                        datagrid,
-                        backend authors permissions management,
-                        to the point design
-                        ...
-                    </p>
-                    <h3>Sweetness</h3>
-                    <p>
-                        Form widgets (Help text, markdown editor,...),
-                        Clean and light <abbr title="User Interface">UI</abbr>,
-                        Responsive design,
-                        Open Source,
-                        brandable
-                        ...
-                    </p>
-                </div>
-                <figure class="col-xs-12 col-md-6 col-md-pull-6">
-                    <img src="http://placehold.it/670x380">
-                    <figcaption class="figure-caption">Comprehensive forms</figcaption>
-                </figure>
-            </div>
+            {% for block in blocks %}
+                {% include 'block/teaser.html.twig' with {'block' : block, 'text_position' : cycle(['right', 'left'], loop.index0)} %}
+            {% endfor %}
 
             <p class="text-center">
-                <a class="btn btn-primary" href="#/shuwee">Discover Shuwee</a>
+                <a class="btn btn-primary" href="{{ path('shuwee') }}">Discover Shuwee</a>
             </p>
         </div>
     </section>

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body_class %}shuwee{% endblock %}
+
+{% block content %}
+    <section class="container">
+        {% for block in blocks %}
+            {% include 'block/teaser.html.twig' with {'block' : block, 'text_position' : cycle(['right', 'left'], loop.index0)} %}
+        {% endfor %}
+    </section>
+{% endblock %}
