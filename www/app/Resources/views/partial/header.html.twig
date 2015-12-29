@@ -1,0 +1,14 @@
+<header data-navbar-style="header"{% if image is defined %} style="background-image:url({{ image }});" class="has-image"{% endif %}>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-md-offset-2">
+                <div class="header-content-inner">
+                    <h1>{{ title }}</h1>
+                    {% if subheading is defined %}
+                    <p class="subheading">{{ subheading }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
