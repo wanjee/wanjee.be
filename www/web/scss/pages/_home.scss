@@ -2,6 +2,14 @@ body {
   &.home {
     .page {
       padding-top: 0;
+
+      h1 {
+        text-align: center;
+      }
+
+      .lead {
+        text-align: center;
+      }
     }
   }
 }

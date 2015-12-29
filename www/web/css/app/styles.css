@@ -2,13 +2,22 @@
 * {
   box-sizing: border-box; }
 
+html {
+  height: 100%; }
+
 body {
   position: relative;
+  height: 100%;
   width: 100%;
   font-size: 14px/1.625;
   font-family: "Raleway","Helvetica Neue",sans-serif;
   color: #828B90;
   overflow: auto; }
+
+.page-wrapper {
+  min-height: 100%;
+  margin: 0 auto -130px;
+  /* the bottom margin is the negative value of the footer's height */ }
 
 section.slide {
   width: 100%;
@@ -147,7 +156,8 @@ a {
     max-width: 100%;
     height: auto; }
   .row.feature figure figcaption {
-    font-size: 12px; }
+    font-size: 12px;
+    text-align: center; }
 
 .loader {
   width: 80px;
@@ -244,18 +254,30 @@ ul.social li.social_item {
   ul.social li.social_item span.label {
     display: none; }
 
-footer {
+body > footer, .footer-push {
+  height: 130px; }
+
+body > footer {
   width: 100%;
   background-color: #F5F2F0; }
-  footer .container {
+  body > footer .container {
     padding-top: 50px;
     padding-bottom: 50px; }
-    footer .container span.icon-heart {
-      color: #E25465; }
+    body > footer .container .row {
+      line-height: 30px; }
+      body > footer .container .row span.icon-heart {
+        color: #E25465; }
+      body > footer .container .row .social {
+        height: 30px;
+        margin-bottom: 0px; }
 
 /* Pages */
 body.home .page {
   padding-top: 0; }
+  body.home .page h1 {
+    text-align: center; }
+  body.home .page .lead {
+    text-align: center; }
 
 #about {
   background-color: #FFFFFF;
@@ -274,8 +296,7 @@ body.home .page {
   border: 1px solid #DDD; }
 
 #blog {
-  background-color: #F9F9F9;
-  text-align: center; }
+  background-color: #F9F9F9; }
   #blog .row {
     margin-top: 50px;
     margin-bottom: 50px; }
@@ -403,8 +424,7 @@ body.home .page {
       margin-top: 20px; }
 
 #shuwee {
-  background-color: #F9F9F9;
-  text-align: center; }
+  background-color: #F9F9F9; }
 
 .post-details .post {
   padding-top: 40px;

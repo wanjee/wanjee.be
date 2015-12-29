@@ -18,10 +18,13 @@
 
 <body data-spy="scroll" data-target="#navigation-main" class="{% block body_class %}{% endblock %}">
 
-{% include 'partial/navbar.html.twig' %}
+<div class="page-wrapper">
+    {% include 'partial/navbar.html.twig' %}
 
-<div class="page">
-    {% block content %}{% endblock %}
+    <div class="page">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="footer-push"></div>
 </div>
 
 {% include 'partial/footer.html.twig' %}

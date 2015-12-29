@@ -3,15 +3,22 @@
 }
 
 html{
+  height: 100%;
 }
 
 body {
   position: relative;
+  height: 100%;
   width: 100%;
   font-size: 14px/1.625;
   font-family: "Raleway","Helvetica Neue",sans-serif;
   color: #828B90;
   overflow: auto;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  margin: 0 auto -130px; /* the bottom margin is the negative value of the footer's height */
 }
 
 section {

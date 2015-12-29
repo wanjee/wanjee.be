@@ -1,4 +1,8 @@
-footer {
+body > footer, .footer-push {
+  height: 130px; // Positive value of the .page-wrapper bottom margin
+}
+
+body > footer {
   width: 100%;
   background-color: #F5F2F0;
 
@@ -6,8 +10,18 @@ footer {
     padding-top: 50px;
     padding-bottom: 50px;
 
-    span.icon-heart {
-      color: #E25465;
+    .row {
+      line-height: 30px;
+
+      span.icon-heart {
+        color: #E25465;
+      }
+
+      .social {
+        height: 30px;
+        margin-bottom: 0px;
+      }
     }
+
   }
 }
