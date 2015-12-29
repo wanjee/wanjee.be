@@ -51,6 +51,7 @@ class BlockType extends AbstractType
                     'label' => 'Caption',
                     'help' => 'Small description of the image.',
                     'group' => 'Media',
+                    'required' => false,
                 )
             )
             ->add(
