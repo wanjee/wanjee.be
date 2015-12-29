@@ -1,0 +1,17 @@
+.post-list {
+
+  section {
+    &.container {
+      padding-top: 40px;
+    }
+  }
+
+  article {
+    margin-bottom: 40px;
+
+
+    .meta {
+      margin: 10px 0;
+    }
+  }
+}

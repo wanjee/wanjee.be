@@ -3,6 +3,14 @@
 {% block body_class %}shuwee{% endblock %}
 
 {% block content %}
+    {% set header_vars = {
+        title: 'Shuwee',
+        subheading: 'Stupidly simple administration for Symfony.',
+        image: asset('img/shuwee.jpg')
+    } %}
+
+    {% include 'partial/header.html.twig' with header_vars %}
+
     <section class="container">
         {% for block in blocks %}
             {% include 'block/teaser.html.twig' with {'block' : block, 'text_position' : cycle(['right', 'left'], loop.index0)} %}

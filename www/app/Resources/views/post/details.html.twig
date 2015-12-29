@@ -3,26 +3,33 @@
 {% block body_class %}post-details{% endblock %}
 
 {% block content %}
+    {% set header_vars = {
+        title : post.title,
+    } %}
+
+    {% include 'partial/header.html.twig' with header_vars %}
+
     <section class="container">
-        <article class="post col-md-12">
-            <h1>{{ post.title }}</h1>
-            <div class="meta">
-                <time datetime="{{ post.publishedAt | date('c') }}">{{ post.publishedAt | date('F j, Y') }}</time>
-            </div>
+        <div class="row">
+            <article class="post col-md-10 col-md-offset-1">
+                <h1>{{ post.title }}</h1>
+                <div class="meta">
+                    <time datetime="{{ post.publishedAt | date('c') }}">{{ post.publishedAt | date('F j, Y') }}</time>
+                </div>
 
-            <div class="excerpt">
-                {{ post.summary }}
-            </div>
+                <div class="excerpt">
+                    {{ post.summary }}
+                </div>
 
-            {% if post.webPath %}
-            <div class="img-container" style="background-image:url({{ asset(post.webPath) }});">
-            </div>
-            {% endif %}
+                {% if post.webPath %}
+                <div class="img-container" style="background-image:url({{ asset(post.webPath) }});">
+                </div>
+                {% endif %}
 
-            <div class="body">
-                {{ post.content | md2html }}
-            </div>
-
-        </article>
+                <div class="body">
+                    {{ post.content | md2html }}
+                </div>
+            </article>
+        </div>
     </section>
 {% endblock %}

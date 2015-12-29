@@ -30,14 +30,11 @@ section {
   }
 }
 
-.page {
-  padding-top: 70px;
-}
-
 a {
   color: #828B90;
   transition: all 0.2s ease-in-out 0s;
 
+  /* Default links */
   &:hover {
     color: #333;
     text-decoration: none;
@@ -54,15 +51,16 @@ a {
     outline: none;
   }
 
+  /* Default buttons */
   &.btn {
     margin: 0 20px;
     padding: 10px 20px;
+    border: none;
+    border-radius: 0;
+    font-weight: 700;
 
     &.btn-default {
-      border: none;
-      border-radius: 0;
       color: #828B90;
-      font-weight: 700;
       background-color: #FFF;
       &:hover {
         background-color: darken(#FFF, 10%);
@@ -71,50 +69,86 @@ a {
         background-color: darken(#FFF, 20%);
       }
     }
-    &.btn-primary {
-      border: none;
-      border-radius: 0;
-      color: #FFFFFF;
-      font-weight: 700;
-      background-color: #0FA2CE;
-      &:hover {
-        background-color: darken(#0FA2CE, 10%);
-        color: #FFFFFF;
-      }
-      &:active {
-        background-color: darken(#0FA2CE, 20%);
-        color: #FFFFFF;
-      }
+  }
+
+  /* Context links and buttons */
+  &.link-about {
+    color: #333;
+    &:hover {
+      color: darken(#5CB85C, 10%);
     }
-    &.btn-success {
-      border: none;
-      border-radius: 0;
-      color: #FFFFFF;
-      font-weight: 700;
-      background-color: #5CB85C;
-      &:hover {
-        background-color: darken(#5CB85C, 10%);
-        color: #FFFFFF;
-      }
-      &:active {
-        background-color: darken(#5CB85C, 20%);
-        color: #FFFFFF;
-      }
+    &:focus {
+      color: darken(#5CB85C, 20%);
     }
-    &.btn-danger {
-      border: none;
-      border-radius: 0;
-      color: #FFFFFF;
-      font-weight: 700;
-      background-color: #D9534F;
-      &:hover {
-        background-color: darken(#D9534F, 10%);
-        color: #FFFFFF;
-      }
-      &:active {
-        background-color: darken(#D9534F, 20%);
-        color: #FFFFFF;
-      }
+    &:active {
+      color: darken(#5CB85C, 20%);
     }
   }
+
+  &.btn-about {
+    color: #FFFFFF;
+    background-color: #5CB85C;
+    &:hover {
+      background-color: darken(#5CB85C, 10%);
+      color: #FFFFFF;
+    }
+    &:active {
+      background-color: darken(#5CB85C, 20%);
+      color: #FFFFFF;
+    }
+  }
+
+  &.link-blog {
+    color: #333;
+    &:hover {
+      color: darken(#0FA2CE, 10%);
+    }
+    &:focus {
+      color: darken(#0FA2CE, 20%);
+    }
+    &:active {
+      color: darken(#0FA2CE, 20%);
+    }
+  }
+
+  &.btn-blog {
+    color: #FFFFFF;
+    background-color: #0FA2CE;
+    &:hover {
+      background-color: darken(#0FA2CE, 10%);
+      color: #FFFFFF;
+    }
+    &:active {
+      background-color: darken(#0FA2CE, 20%);
+      color: #FFFFFF;
+    }
+  }
+
+  &.link-shuwee {
+    color: #333;
+    &:hover {
+      color: darken(#4078C0, 10%);
+    }
+    &:focus {
+      color: darken(#4078C0, 20%);
+    }
+    &:active {
+      color: darken(#4078C0, 20%);
+    }
+  }
+
+  &.btn-shuwee {
+    color: #FFFFFF;
+    background-color: #4078C0;
+    &:hover {
+      background-color: darken(#4078C0, 10%);
+      color: #FFFFFF;
+    }
+    &:active {
+      background-color: darken(#4078C0, 20%);
+      color: #FFFFFF;
+    }
+  }
+
+
 }

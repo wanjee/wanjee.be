@@ -3,7 +3,7 @@
 {% block body_class %}home{% endblock %}
 
 {% block content %}
-    <section class="slide" id="hero" data-navbar-style="hero">
+    <header id="hero" data-navbar-style="hero">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -11,14 +11,14 @@
                         <h1>Wanjee</h1>
                         <h2>Web artisan</h2>
                         <div class="actions-wrapper">
-                            <a class="btn btn-primary" href="#blog" target="_self">Blog</a>
-                            <a class="btn btn-success" href="#about" target="_self">Get to know me</a>
+                            <a class="btn btn-blog" href="#blog" target="_self">Blog</a>
+                            <a class="btn btn-about" href="#about" target="_self">Get to know me</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <section class="slide" id="blog">
         <div class="container">
@@ -35,7 +35,7 @@
                 {% endfor %}
             </div>
             <p class="text-center">
-                <a class="btn btn-primary" href="{{ path('posts_index') }}">See all posts</a>
+                <a class="btn btn-blog" href="{{ path('posts_index') }}">See all posts</a>
             </p>
         </div>
     </section>
@@ -76,7 +76,7 @@
             {% endfor %}
 
             <p class="text-center">
-                <a class="btn btn-primary" href="{{ path('shuwee') }}">Discover Shuwee</a>
+                <a class="btn btn-shuwee" href="{{ path('shuwee') }}">Discover Shuwee</a>
             </p>
         </div>
     </section>

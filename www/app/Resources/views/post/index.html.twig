@@ -3,9 +3,38 @@
 {% block body_class %}post-list{% endblock %}
 
 {% block content %}
+    {% set header_vars = {
+        title : 'To quality and beyond',
+        subheading : 'Quality focused small posts about PHP projects (Symfony, Drupal) and web development best practices in general.',
+        image: asset('img/blog.jpg')
+    } %}
+
+    {% include 'partial/header.html.twig' with header_vars %}
+
     <section class="container">
         {% for post in posts %}
-            {% include 'post/teaser.html.twig' with {'post' : post} %}
+            {% set postUrl = path('post_details', {'slug': post.slug}) %}
+            <div class="row">
+                <article class="post col-md-10 col-md-offset-1">
+                    <div class="img-container">
+                        <a class="img" style="background-image:url({{ post.webPath | imagine_filter('post_promoted') }});"
+                           href="{{ postUrl }}"></a>
+                    </div>
+
+                    <div class="copy-container">
+                        <div class="copy">
+                            <h2><a href="{{ postUrl }}">{{ post.title }}</a></h2>
+
+                            <div class="excerpt">
+                                {{ post.summary }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meta">
+                        Posted on <time datetime="{{ post.publishedAt | date('c') }}">{{ post.publishedAt | date('F j, Y') }}</time>
+                    </div>
+                </article>
+            </div>
         {% endfor %}
     </section>
 {% endblock %}
