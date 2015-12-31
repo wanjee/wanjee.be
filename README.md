@@ -1,7 +1,7 @@
-Shuwee
-======
+Wanjee.be
+=========
 
-Shuwee is (or will be) a backend administration application (yes, one more) for your websites or RESTFUL apps.
+Shuwee is a backend administration application (yes, one more) for your websites or RESTFUL apps.  It is made from several Symfony bundles.
 
 Features will include:
 
@@ -10,27 +10,7 @@ Features will include:
 - REST API
 - And much more
 
-This is my playground for the development of Shuwee bundles.  This repository nothing more than a working demonstration of all Shuwee bundles. 
-
-Documentation
--------------
-
-See documentation of all bundles separately.
-
-How to install this demo
-------------------------
-
-- Checkout
-- $ composer install
-- $ bin/console doctrine:schema:update --force 
-- $ bin/console cache:clear --env=prod 
-- $ bin/console assets:install --symlink
-- $ bin/console assetic:dump --env=prod
-- $ bin/console doctrine:fixtures:load (only if you want to load example content)
-- $ bin/console shuwee:admin:user:add --roles=ROLE_ADMIN
-- Connect to http://your.domain.dev/admin
-
-
+Wanjee.be is my personal website which I also use as a playground and demo for the development of Shuwee bundles.
 
 License
 -------
