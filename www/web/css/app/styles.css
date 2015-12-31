@@ -253,7 +253,10 @@ nav .navbar-toggle .icon-bar {
   background-color: #888; }
 nav .navbar-brand {
   font-weight: 500;
-  color: #efefef; }
+  color: #efefef;
+  padding: 10px 15px; }
+  nav .navbar-brand img {
+    max-height: 100%; }
 nav .nav > li > a {
   transition: none;
   color: #fff; }
@@ -269,29 +272,43 @@ ul.social li.social_item {
   ul.social li.social_item span.label {
     display: none; }
 
-header {
+.page > header {
   height: 25vh;
+  position: relative;
   background-color: #F9F9F9;
   color: #828B90; }
-  header.has-image {
+  .page > header.has-image {
     background: transparent no-repeat center center / cover;
-    color: #fff; }
-  header .container {
+    color: #fff;
+    height: 30vh; }
+    .page > header.has-image .overlay {
+      position: absolute;
+      background-color: #000;
+      opacity: 0.4;
+      filter: alpha(opacity=40);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1; }
+  .page > header .container {
+    height: 100%;
+    z-index: 5;
+    position: relative; }
+  .page > header .row {
     height: 100%; }
-  header .row {
-    height: 100%; }
-    header .row > div {
+    .page > header .row > div {
       height: 100%; }
-    header .row .header-content-inner {
+    .page > header .row .header-content-inner {
       position: relative;
       top: 50%;
       transform: translate(0, -50%); }
-      header .row .header-content-inner h1 {
+      .page > header .row .header-content-inner h1 {
         text-align: center;
         margin: 0 auto 10px;
         padding: 0;
         font-size: 42px; }
-      header .row .header-content-inner .subheading {
+      .page > header .row .header-content-inner .subheading {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
@@ -393,13 +410,15 @@ body.home .page .lead {
         text-align: center;
         margin: 0 auto 10px;
         padding: 0;
-        font-size: 42px; }
+        font-size: 42px;
+        text-shadow: 1px 1px 5px black; }
       #hero .row .hero-content-inner h2 {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
         padding: 0;
-        font-size: 36px; }
+        font-size: 36px;
+        text-shadow: 1px 1px 5px black; }
     #hero .row > div {
       height: 100%; }
       #hero .row > div .actions-wrapper {

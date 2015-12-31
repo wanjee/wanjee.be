@@ -1,5 +1,6 @@
-header {
+.page > header {
   height: 25vh;
+  position: relative;
 
   background-color: #F9F9F9;
   color: #828B90;
@@ -7,10 +8,25 @@ header {
   &.has-image {
     background: transparent no-repeat center center / cover;
     color: #fff;
+    height: 30vh;
+
+    .overlay {
+      position: absolute;
+      background-color: #000;
+      opacity: 0.4;
+      filter: alpha(opacity=40);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
   }
 
   .container {
     height: 100%;
+    z-index: 5;
+    position: relative;
   }
 
   .row {

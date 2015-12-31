@@ -30,6 +30,11 @@ nav {
   .navbar-brand {
     font-weight: 500;
     color: #efefef;
+    padding: 10px 15px;
+
+    img {
+      max-height: 100%;
+    }
   }
 
   .nav {
