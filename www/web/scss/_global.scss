@@ -30,6 +30,10 @@ section {
   }
 }
 
+.pagination {
+  font-size: 14px;
+}
+
 a {
   color: #828B90;
   transition: all 0.2s ease-in-out 0s;
@@ -166,6 +170,4 @@ a {
       background-color: darken($shuwee-color, 20%);
     }
   }
-
-
 }

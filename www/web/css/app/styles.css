@@ -25,6 +25,9 @@ section.slide {
   padding-top: 20px;
   padding-bottom: 20px; }
 
+.pagination {
+  font-size: 14px; }
+
 a {
   color: #828B90;
   transition: all 0.2s ease-in-out 0s;

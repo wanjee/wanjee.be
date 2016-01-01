@@ -20,23 +20,26 @@ class PostController extends Controller
      */
     public function getPostsAction(Request $request)
     {
-        // load all posts
-        $filters = array(
-            'status' => true,
-        );
-
-        $order = array(
-            'publishedAt' => 'DESC',
-        );
-
         $em = $this->getDoctrine()->getManager();
 
-        $posts = $em->getRepository('AppBundle:Post')->findBy($filters, $order);
+        $query = $em->getRepository('AppBundle:Post')
+            ->createQueryBuilder('p')
+            ->where('p.status = :status')
+            ->setParameter('status', true)
+            ->orderBy('p.publishedAt', 'DESC')
+            ->getQuery();
+
+        $paginator  = $this->get('knp_paginator');
+        $paginatedPosts = $paginator->paginate(
+            $query,
+            $request->query->getInt('page', 1),
+            5
+        );
 
         $response = $this->render(
             'post/index.html.twig',
             array(
-                'posts' => $posts,
+                'posts' => $paginatedPosts,
             )
         );
 
