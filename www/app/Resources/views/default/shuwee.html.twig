@@ -11,9 +11,32 @@
 
     {% include 'partial/header.html.twig' with header_vars %}
 
-    <section class="container">
-        {% for block in blocks %}
-            {% include 'block/teaser.html.twig' with {'block' : block, 'text_position' : cycle(['right', 'left'], loop.index0)} %}
-        {% endfor %}
+    <section class="slide promoted">
+        <div class="container">
+            {% for block in blocks if block.promoted %}
+                {% include 'block/teaser.html.twig' with {'block' : block, 'text_position' : cycle(['right', 'left'], loop.index0)} %}
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="slide simplicity">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <blockquote>
+                        <p>Simplicity is about subtracting the obvious and adding the meaningful.</p>
+                        <footer>John Maeda</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide not-promoted">
+        <div class="container">
+            {% for block in blocks if not block.promoted %}
+                {% include 'block/teaser.html.twig' with {'block' : block, 'text_position' : cycle(['right', 'left'], loop.index0)} %}
+            {% endfor %}
+        </div>
     </section>
 {% endblock %}
