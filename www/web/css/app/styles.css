@@ -307,6 +307,10 @@ ul.social li.social_item {
     background: transparent no-repeat center center / cover;
     color: #fff;
     height: 30vh; }
+    .page > header.has-image h1 {
+      text-shadow: 1px 1px 5px #000; }
+    .page > header.has-image .subheading {
+      text-shadow: 1px 1px 5px #000; }
     .page > header.has-image .overlay {
       position: absolute;
       background-color: #000;
