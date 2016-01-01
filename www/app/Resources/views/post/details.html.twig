@@ -11,8 +11,14 @@
 
     <section class="container">
         <div class="row">
+            <div class="inner-nav col-md-10 col-md-offset-1">
+                <a href="{{ path('posts_index') }}" class="link-blog"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back to list</a>
+            </div>
+        </div>
+        <div class="row">
             <article class="post col-md-10 col-md-offset-1">
                 <h1>{{ post.title }}</h1>
+
                 <div class="meta">
                     <time datetime="{{ post.publishedAt | date('c') }}">{{ post.publishedAt | date('F j, Y') }}</time>
                 </div>

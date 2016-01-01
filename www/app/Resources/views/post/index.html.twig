@@ -17,13 +17,16 @@
             <div class="row">
                 <article class="post col-md-10 col-md-offset-1">
                     <div class="img-container">
-                        <a class="img" style="background-image:url({{ post.webPath | imagine_filter('post_promoted') }});"
-                           href="{{ postUrl }}"></a>
+                        {% if post.webPath is not empty %}
+                            <a href="{{ postUrl }}" style="background-image:url({{ post.webPath | imagine_filter('post_promoted') }});" ></a>
+                        {% else %}
+                            <a href="{{ postUrl }}"></a>
+                        {% endif %}
                     </div>
 
                     <div class="copy-container">
                         <div class="copy">
-                            <h2><a href="{{ postUrl }}">{{ post.title }}</a></h2>
+                            <h2><a href="{{ postUrl }}" class="link-blog">{{ post.title }}</a></h2>
 
                             <div class="excerpt">
                                 {{ post.summary }}
@@ -31,7 +34,7 @@
                         </div>
                     </div>
                     <div class="meta">
-                        Posted on <time datetime="{{ post.publishedAt | date('c') }}">{{ post.publishedAt | date('F j, Y') }}</time>
+                        <time datetime="{{ post.publishedAt | date('c') }}">{{ post.publishedAt | date('F j, Y') }}</time>
                     </div>
                 </article>
             </div>
