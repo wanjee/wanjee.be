@@ -8,6 +8,13 @@ body {
       .lead {
         text-align: center;
       }
+
+      section {
+        &.slide {
+          padding-top: 80px;
+          padding-bottom: 80px;
+        }
+      }
     }
   }
 }

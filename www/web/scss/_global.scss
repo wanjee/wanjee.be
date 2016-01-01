@@ -10,7 +10,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  font-size: 14px/1.625;
+  font-size: 16px;
   font-family: "Raleway","Helvetica Neue",sans-serif;
   color: #828B90;
   overflow: auto;
@@ -18,15 +18,15 @@ body {
 
 .page-wrapper {
   min-height: 100%;
-  margin: 0 auto -130px; /* the bottom margin is the negative value of the footer's height */
+  margin: 0 auto -120px; /* the bottom margin is the negative value of the footer's height */
 }
 
 section {
   &.slide {
     width: 100%;
     max-width: none;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -59,94 +59,111 @@ a {
     border-radius: 0;
     font-weight: 700;
 
-    &.btn-default {
-      color: #828B90;
-      background-color: #FFF;
-      &:hover {
-        background-color: darken(#FFF, 10%);
-      }
-      &:active {
-        background-color: darken(#FFF, 20%);
-      }
+    &:hover {
+      color: #333;
+      text-decoration: none;
+      outline: none;
+    }
+    &:focus {
+      color: #333;
+      text-decoration: none;
+      outline: none;
+    }
+    &:active {
+      color: #333;
+      text-decoration: none;
+      outline: none;
     }
   }
 
   /* Context links and buttons */
   &.link-about {
-    color: #333;
+    color: $about-color;
     &:hover {
-      color: darken(#5CB85C, 10%);
-    }
-    &:focus {
-      color: darken(#5CB85C, 20%);
+      color: darken($about-color, 10%);
     }
     &:active {
-      color: darken(#5CB85C, 20%);
+      color: darken($about-color, 20%);
+    }
+    &:focus {
+      color: darken($about-color, 20%);
     }
   }
 
   &.btn-about {
     color: #FFFFFF;
-    background-color: #5CB85C;
+    background-color: $about-color;
     &:hover {
-      background-color: darken(#5CB85C, 10%);
       color: #FFFFFF;
+      background-color: darken($about-color, 10%);
     }
     &:active {
-      background-color: darken(#5CB85C, 20%);
       color: #FFFFFF;
+      background-color: darken($about-color, 20%);
+    }
+    &:focus {
+      color: #FFFFFF;
+      background-color: darken($about-color, 20%);
     }
   }
 
   &.link-blog {
-    color: #333;
+    color: $blog-color;
     &:hover {
-      color: darken(#0FA2CE, 10%);
-    }
-    &:focus {
-      color: darken(#0FA2CE, 20%);
+      color: darken($blog-color, 10%);
     }
     &:active {
-      color: darken(#0FA2CE, 20%);
+      color: darken($blog-color, 20%);
+    }
+    &:focus {
+      color: darken($blog-color, 20%);
     }
   }
 
   &.btn-blog {
+    background-color: $blog-color;
     color: #FFFFFF;
-    background-color: #0FA2CE;
     &:hover {
-      background-color: darken(#0FA2CE, 10%);
+      background-color: darken($blog-color, 10%);
       color: #FFFFFF;
     }
     &:active {
-      background-color: darken(#0FA2CE, 20%);
       color: #FFFFFF;
+      background-color: darken($blog-color, 20%);
+    }
+    &:focus {
+      color: #FFFFFF;
+      background-color: darken($blog-color, 20%);
     }
   }
 
   &.link-shuwee {
-    color: #333;
+    color: $shuwee-color;
     &:hover {
-      color: darken(#4078C0, 10%);
-    }
-    &:focus {
-      color: darken(#4078C0, 20%);
+      color: darken($shuwee-color, 10%);
     }
     &:active {
-      color: darken(#4078C0, 20%);
+      color: darken($shuwee-color, 20%);
+    }
+    &:focus {
+      color: darken($shuwee-color, 20%);
     }
   }
 
   &.btn-shuwee {
     color: #FFFFFF;
-    background-color: #4078C0;
+    background-color: $shuwee-color;
     &:hover {
-      background-color: darken(#4078C0, 10%);
       color: #FFFFFF;
+      background-color: darken($shuwee-color, 10%);
     }
     &:active {
-      background-color: darken(#4078C0, 20%);
       color: #FFFFFF;
+      background-color: darken($shuwee-color, 20%);
+    }
+    &:focus {
+      color: #FFFFFF;
+      background-color: darken($shuwee-color, 20%);
     }
   }
 

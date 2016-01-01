@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 /* Others */
+@import "variables";
 @import "global";
 
 /* Fonts */
@@ -10,6 +11,7 @@
 @import "components/block";
 @import "components/loader";
 @import "components/nav";
+@import "components/quote";
 @import "components/social";
 @import "components/header";
 @import "components/footer";
@@ -23,3 +25,4 @@
 @import "pages/home_shuwee";
 @import "pages/post_details";
 @import "pages/post_list";
+@import "pages/shuwee";

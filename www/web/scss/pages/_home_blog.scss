@@ -1,6 +1,10 @@
 #blog {
   background-color: #F9F9F9;
 
+  h1 {
+    color: $blog-color;
+  }
+  
   .row {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -20,7 +24,7 @@
         height: 200px;
         width: 100%;
         display: block;
-        background-color: #cccccc;
+        background-color: #efefef;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -41,7 +45,6 @@
     }
 
     a.link {
-      color: #0FA2CE;
       display: block;
       border-top: 1px solid #dddddd;
       padding: 15px;

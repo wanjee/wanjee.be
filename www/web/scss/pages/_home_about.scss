@@ -2,6 +2,10 @@
   background-color: #FFFFFF;
   text-align: center;
 
+  h1 {
+    color: $about-color;
+  }
+
   ul.social {
     li {
       padding: 50px;
