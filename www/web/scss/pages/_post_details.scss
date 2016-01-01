@@ -18,6 +18,19 @@
       height: 300px;
     }
 
+    a {
+      color: $blog-color;
+      &:hover {
+        color: darken($blog-color, 10%);
+      }
+      &:active {
+        color: darken($blog-color, 20%);
+      }
+      &:focus {
+        color: darken($blog-color, 20%);
+      }
+    }
+
     p,
     pre,
     blockquote,
