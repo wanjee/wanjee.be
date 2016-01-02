@@ -346,16 +346,17 @@ ul.social li.social_item {
         font-size: 24px; }
 
 body > footer, .footer-push {
-  height: 130px; }
+  height: 120px; }
 
 body > footer {
   width: 100%;
   background-color: #F5F2F0; }
   body > footer .container {
-    padding-top: 50px;
-    padding-bottom: 50px; }
+    padding-top: 40px;
+    padding-bottom: 40px; }
     body > footer .container .row {
-      line-height: 30px; }
+      line-height: 30px;
+      font-size: 14px; }
       body > footer .container .row span.icon-heart {
         color: #E25465; }
       body > footer .container .row .social {
@@ -556,6 +557,11 @@ body.home .page section.slide {
 body.shuwee {
   background-color: #F9F9F9; }
   body.shuwee section.simplicity {
+    background-color: #FFFFFF;
+    padding-top: 80px;
+    padding-bottom: 80px; }
+  body.shuwee section.cta {
+    text-align: center;
     background-color: #FFFFFF;
     padding-top: 80px;
     padding-bottom: 80px; }

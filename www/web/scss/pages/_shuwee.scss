@@ -8,7 +8,13 @@ body {
         padding-top: 80px;
         padding-bottom: 80px;
       }
-    }
 
+      &.cta {
+        text-align: center;
+        background-color: #FFFFFF;
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+    }
   }
 }
