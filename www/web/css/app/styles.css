@@ -547,6 +547,11 @@ body.home .page section.slide {
   margin-bottom: 40px; }
   .post-list article .meta {
     margin: 10px 0; }
+.post-list .pagination > li > a {
+  color: #98aeb6; }
+.post-list .pagination > .active > span {
+  border-color: #98aeb6;
+  background-color: #98aeb6; }
 
 body.shuwee {
   background-color: #F9F9F9; }

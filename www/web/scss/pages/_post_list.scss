@@ -13,4 +13,23 @@
       margin: 10px 0;
     }
   }
+
+  .pagination {
+    > li {
+      > a {
+        color: $blog-color;
+
+        &:focus {
+
+        }
+      }
+    }
+
+    > .active {
+      > span {
+        border-color: $blog-color;
+        background-color: $blog-color;
+      }
+    }
+  }
 }
