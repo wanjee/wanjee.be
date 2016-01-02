@@ -11,34 +11,14 @@
                         <h1>Wanjee</h1>
                         <h2>Web artisan</h2>
                         <div class="actions-wrapper">
-                            <a class="btn btn-blog" href="#blog" target="_self">Blog</a>
                             <a class="btn btn-about" href="#about" target="_self">Get to know me</a>
+                            <a class="btn btn-blog" href="#blog" target="_self">Blog</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
-    <section class="slide" id="blog">
-        <div class="container">
-            <h1>To quality and beyond</h1>
-
-            <div class="lead">Quality focused small posts about PHP projects (Symfony, Drupal) and web development best
-                practices in general.
-            </div>
-            <div id="post-promoted" class="row">
-                {% for post in posts %}
-                    <div class="col-md-6 col-lg-4">
-                        {% include 'post/teaser.html.twig' with {'post' : post} %}
-                    </div>
-                {% endfor %}
-            </div>
-            <p class="text-center">
-                <a class="btn btn-blog" href="{{ path('posts_index') }}">See all posts</a>
-            </p>
-        </div>
-    </section>
 
     <section class="slide" id="about">
         <div class="container">
@@ -59,6 +39,26 @@
                 </p>
             </div>
             {% include 'partial/social.html.twig' %}
+        </div>
+    </section>
+
+    <section class="slide" id="blog">
+        <div class="container">
+            <h1>To quality and beyond</h1>
+
+            <div class="lead">Quality focused small posts about PHP projects (Symfony, Drupal) and web development best
+                practices in general.
+            </div>
+            <div id="post-promoted" class="row">
+                {% for post in posts %}
+                    <div class="col-md-6 col-lg-4">
+                        {% include 'post/teaser.html.twig' with {'post' : post} %}
+                    </div>
+                {% endfor %}
+            </div>
+            <p class="text-center">
+                <a class="btn btn-blog" href="{{ path('posts_index') }}">See all posts</a>
+            </p>
         </div>
     </section>
 
