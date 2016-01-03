@@ -60,7 +60,7 @@ class BlockAdmin extends Admin
                 'image',
                 array(
                     'label' => 'Image',
-                    'base_path' => 'uploads/posts'
+                    'base_path' => 'uploads/blocks'
                 )
             )
             ->addField(
