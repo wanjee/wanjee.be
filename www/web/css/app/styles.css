@@ -65,65 +65,65 @@ a {
       text-decoration: none;
       outline: none; }
   a.link-about {
-    color: #9c8481; }
+    color: #594F4F; }
     a.link-about:hover {
-      color: #836a67; }
+      color: #3e3737; }
     a.link-about:active {
-      color: #665351; }
+      color: #231f1f; }
     a.link-about:focus {
-      color: #665351; }
+      color: #231f1f; }
   a.btn-about {
     color: #FFFFFF;
-    background-color: #9c8481; }
+    background-color: #594F4F; }
     a.btn-about:hover {
       color: #FFFFFF;
-      background-color: #836a67; }
+      background-color: #3e3737; }
     a.btn-about:active {
       color: #FFFFFF;
-      background-color: #665351; }
+      background-color: #231f1f; }
     a.btn-about:focus {
       color: #FFFFFF;
-      background-color: #665351; }
+      background-color: #231f1f; }
   a.link-blog {
-    color: #98aeb6; }
+    color: #547980; }
     a.link-blog:hover {
-      color: #7a97a1; }
+      color: #405c61; }
     a.link-blog:active {
-      color: #607d88; }
+      color: #2c3f42; }
     a.link-blog:focus {
-      color: #607d88; }
+      color: #2c3f42; }
   a.btn-blog {
-    background-color: #98aeb6;
+    background-color: #547980;
     color: #FFFFFF; }
     a.btn-blog:hover {
-      background-color: #7a97a1;
+      background-color: #405c61;
       color: #FFFFFF; }
     a.btn-blog:active {
       color: #FFFFFF;
-      background-color: #607d88; }
+      background-color: #2c3f42; }
     a.btn-blog:focus {
       color: #FFFFFF;
-      background-color: #607d88; }
+      background-color: #2c3f42; }
   a.link-shuwee {
-    color: #0FA2CE; }
+    color: #45ADA8; }
     a.link-shuwee:hover {
-      color: #0c7d9e; }
+      color: #368985; }
     a.link-shuwee:active {
-      color: #08576f; }
+      color: #286461; }
     a.link-shuwee:focus {
-      color: #08576f; }
+      color: #286461; }
   a.btn-shuwee {
     color: #FFFFFF;
-    background-color: #0FA2CE; }
+    background-color: #45ADA8; }
     a.btn-shuwee:hover {
       color: #FFFFFF;
-      background-color: #0c7d9e; }
+      background-color: #368985; }
     a.btn-shuwee:active {
       color: #FFFFFF;
-      background-color: #08576f; }
+      background-color: #286461; }
     a.btn-shuwee:focus {
       color: #FFFFFF;
-      background-color: #08576f; }
+      background-color: #286461; }
 
 /* Fonts */
 @font-face {
@@ -381,7 +381,7 @@ body.home .page section.slide {
   background-color: #F9F9F9;
   text-align: center; }
   #about h1 {
-    color: #9c8481; }
+    color: #594F4F; }
   #about ul.social li {
     padding: 50px; }
     #about ul.social li a span.icon {
@@ -396,7 +396,7 @@ body.home .page section.slide {
 #blog {
   background-color: #FFFFFF; }
   #blog h1 {
-    color: #98aeb6; }
+    color: #547980; }
   #blog .row {
     margin-top: 50px;
     margin-bottom: 50px; }
@@ -431,9 +431,9 @@ body.home .page section.slide {
         color: #ffffff;
         padding-left: 0; }
       #blog .post a.link:hover {
-        color: #7a97a1; }
+        color: #405c61; }
         #blog .post a.link:hover span {
-          color: #7a97a1;
+          color: #405c61;
           padding-left: 5px; }
 
 #hero {
@@ -547,7 +547,7 @@ body.home .page section.slide {
 #shuwee {
   background-color: #F9F9F9; }
   #shuwee h1 {
-    color: #0FA2CE; }
+    color: #45ADA8; }
 
 .post-details .inner-nav {
   margin-top: 10px;
@@ -561,13 +561,13 @@ body.home .page section.slide {
     background: #FFFFFF no-repeat scroll center center / contain;
     height: 300px; }
   .post-details .post a {
-    color: #98aeb6; }
+    color: #547980; }
     .post-details .post a:hover {
-      color: #7a97a1; }
+      color: #405c61; }
     .post-details .post a:active {
-      color: #607d88; }
+      color: #2c3f42; }
     .post-details .post a:focus {
-      color: #607d88; }
+      color: #2c3f42; }
   .post-details .post p,
   .post-details .post pre,
   .post-details .post blockquote,
@@ -581,21 +581,21 @@ body.home .page section.slide {
   .post-list article .meta {
     margin: 10px 0; }
 .post-list .pagination > li > a {
-  color: #98aeb6; }
+  color: #547980; }
 .post-list .pagination > .active > span {
-  border-color: #98aeb6;
-  background-color: #98aeb6; }
+  border-color: #547980;
+  background-color: #547980; }
 
 body.shuwee {
   background-color: #F9F9F9; }
   body.shuwee section a {
-    color: #0FA2CE; }
+    color: #45ADA8; }
     body.shuwee section a:hover {
-      color: #0c7d9e; }
+      color: #368985; }
     body.shuwee section a:active {
-      color: #08576f; }
+      color: #286461; }
     body.shuwee section a:focus {
-      color: #08576f; }
+      color: #286461; }
     body.shuwee section a.btn {
       color: #fff; }
   body.shuwee section.simplicity {
