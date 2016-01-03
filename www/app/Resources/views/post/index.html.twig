@@ -2,6 +2,17 @@
 
 {% block body_class %}post-list{% endblock %}
 
+{% block page_title %}To quality & beyond, by Wanjee{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="Quality focused small posts about PHP projects (Symfony, Drupal) and web development best practices in general. ">
+
+    <meta property="og:title" content="To quality & beyond" />
+    <meta property="og:description" content="Quality focused small posts about PHP projects (Symfony, Drupal) and web development best practices in general. ">
+    <meta property="og:url" content="{{ url('posts_index') }}" />
+    <meta property="og:image" content="" />
+{% endblock %}
+
 {% block content %}
     {% set header_vars = {
         title : 'To quality and beyond',

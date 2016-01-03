@@ -2,6 +2,18 @@
 
 {% block body_class %}shuwee{% endblock %}
 
+{% block page_title %}Shuwee, by Wanjee{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="Stupidly simple administration for Symfony.">
+
+    <meta property="og:title" content="Shuwee" />
+    <meta property="og:description" content="Stupidly simple administration for Symfony." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ url('shuwee') }}" />
+    {# <meta property="og:image" content="{{ absolute_url(asset(post.webPath)) }})" /> #}
+{% endblock %}
+
 {% block content %}
     {% set header_vars = {
         title: 'Shuwee',

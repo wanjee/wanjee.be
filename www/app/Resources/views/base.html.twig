@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <title>{% block page_title %}Wanjee - Web artisan{% endblock %}</title>
-    <meta name="description" content="{% block page_description %}{% endblock %}">
     <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png" />
+
+    {% block meta %}{% endblock %}
+
+    <meta property="fb:admins" content="729625100" />
 
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('css/vendors.min.css') }}">
@@ -19,9 +22,26 @@
 
 <body data-spy="scroll" data-target="#navigation-main" class="{% block body_class %}{% endblock %}">
 
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1751081071781784',
+            xfbml      : true,
+            version    : 'v2.5'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <div class="page-wrapper">
     {% include 'partial/navbar.html.twig' %}
-
     <div class="page">
         {% block content %}{% endblock %}
     </div>
