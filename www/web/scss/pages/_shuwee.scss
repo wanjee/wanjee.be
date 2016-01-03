@@ -3,6 +3,22 @@ body {
     background-color: #F9F9F9;
 
     section {
+      a {
+        color: $shuwee-color;
+        &:hover {
+          color: darken($shuwee-color, 10%);
+        }
+        &:active {
+          color: darken($shuwee-color, 20%);
+        }
+        &:focus {
+          color: darken($shuwee-color, 20%);
+        }
+        &.btn {
+          color: #fff;
+        }
+      }
+      
       &.simplicity {
         background-color: #FFFFFF;
         padding-top: 80px;

@@ -67,6 +67,11 @@ liip_imagine:
             quality: 75
             filters:
                 thumbnail: { size: [400, 200], mode: outbound }
+        block_figure:
+            quality: 75
+            filters:
+                thumbnail: { size: [670, 380], mode: outbound }
+
 
 services:
     twig.extension.text:

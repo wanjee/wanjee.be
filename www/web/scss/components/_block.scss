@@ -6,12 +6,19 @@
     .description {
       padding: 20px 30px;
       text-align: left;
+
+      &.no-figure {
+        text-align: center;
+      }
     }
 
     figure {
       img {
         max-width: 100%;
         height: auto;
+        border: 1px solid #DDD;
+        border-radius: 4px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
       }
 
       figcaption {

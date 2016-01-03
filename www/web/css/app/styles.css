@@ -184,9 +184,14 @@ a {
   .row.feature .description {
     padding: 20px 30px;
     text-align: left; }
+    .row.feature .description.no-figure {
+      text-align: center; }
   .row.feature figure img {
     max-width: 100%;
-    height: auto; }
+    height: auto;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08); }
   .row.feature figure figcaption {
     font-size: 12px;
     text-align: center; }
@@ -401,7 +406,7 @@ body.home .page section.slide {
     border: 1px solid #dddddd;
     border-radius: 4px;
     text-align: left;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08); }
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08); }
     #blog .post .img-container a {
       height: 200px;
       width: 100%;
@@ -583,6 +588,16 @@ body.home .page section.slide {
 
 body.shuwee {
   background-color: #F9F9F9; }
+  body.shuwee section a {
+    color: #0FA2CE; }
+    body.shuwee section a:hover {
+      color: #0c7d9e; }
+    body.shuwee section a:active {
+      color: #08576f; }
+    body.shuwee section a:focus {
+      color: #08576f; }
+    body.shuwee section a.btn {
+      color: #fff; }
   body.shuwee section.simplicity {
     background-color: #FFFFFF;
     padding-top: 80px;
