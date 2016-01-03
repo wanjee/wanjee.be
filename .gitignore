@@ -2,8 +2,4 @@
 /.vagrant/
 node_modules
 
-back/web/media
-back/web/uploads
 npm-debug.log
-www/web/uploads
-www/web/media
