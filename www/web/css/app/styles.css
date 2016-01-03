@@ -373,7 +373,7 @@ body.home .page section.slide {
   padding-bottom: 80px; }
 
 #about {
-  background-color: #FFFFFF;
+  background-color: #F9F9F9;
   text-align: center; }
   #about h1 {
     color: #9c8481; }
@@ -389,7 +389,7 @@ body.home .page section.slide {
   border: 1px solid #DDD; }
 
 #blog {
-  background-color: #F9F9F9; }
+  background-color: #FFFFFF; }
   #blog h1 {
     color: #98aeb6; }
   #blog .row {
@@ -419,7 +419,6 @@ body.home .page section.slide {
         min-height: 100px; }
     #blog .post a.link {
       display: block;
-      border-top: 1px solid #dddddd;
       padding: 15px;
       font-size: 14px; }
       #blog .post a.link span {
