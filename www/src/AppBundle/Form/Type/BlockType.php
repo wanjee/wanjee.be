@@ -63,6 +63,8 @@ class BlockType extends AbstractType
                     'required' => true,
                     'help' => 'Relative position of this block amongst other.  Lower weight will "float" above the others.',
                     'group' => 'Meta',
+                    // Must be set to true in > 2.7.  See http://symfony.com/doc/current/reference/forms/types/choice.html#choices-as-values
+                    'choices_as_values' => true,
                 )
             )
             ->add(
@@ -95,13 +97,5 @@ class BlockType extends AbstractType
                 'data_class' => 'AppBundle\Entity\Block',
             )
         );
-    }
-
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return 'post';
     }
 }

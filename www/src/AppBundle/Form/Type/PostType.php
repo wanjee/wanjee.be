@@ -81,12 +81,4 @@ class PostType extends AbstractType
             )
         );
     }
-
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return 'post';
-    }
 }
