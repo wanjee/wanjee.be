@@ -50,7 +50,7 @@ a {
     margin: 0 20px;
     padding: 10px 20px;
     border: none;
-    border-radius: 0;
+    border-radius: 4px;
     font-weight: 700; }
     a.btn:hover {
       color: #333;
