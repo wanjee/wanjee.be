@@ -1,11 +1,13 @@
 .page > header {
-  height: 30vh;
+  height: 25vh;
+  min-height: 150px;
   position: relative;
 
   background-color: #F9F9F9;
   color: #828B90;
 
   &.has-image {
+    height: 30vh;
     background: transparent no-repeat center center / cover;
     color: #fff;
 

@@ -85,25 +85,25 @@ a {
       color: #FFFFFF;
       background-color: #322117; }
   a.link-blog {
-    color: #E08E79; }
+    color: #DD9C2C; }
     a.link-blog:hover {
-      color: #d66b50; }
+      color: #b8801e; }
     a.link-blog:active {
-      color: #c54d2e; }
+      color: #8c6117; }
     a.link-blog:focus {
-      color: #c54d2e; }
+      color: #8c6117; }
   a.btn-blog {
-    background-color: #E08E79;
+    background-color: #DD9C2C;
     color: #FFFFFF; }
     a.btn-blog:hover {
-      background-color: #d66b50;
+      background-color: #b8801e;
       color: #FFFFFF; }
     a.btn-blog:active {
       color: #FFFFFF;
-      background-color: #c54d2e; }
+      background-color: #8c6117; }
     a.btn-blog:focus {
       color: #FFFFFF;
-      background-color: #c54d2e; }
+      background-color: #8c6117; }
   a.link-shuwee {
     color: #45ADA8; }
     a.link-shuwee:hover {
@@ -304,11 +304,13 @@ ul.social li.social_item {
     display: none; }
 
 .page > header {
-  height: 30vh;
+  height: 25vh;
+  min-height: 150px;
   position: relative;
   background-color: #F9F9F9;
   color: #828B90; }
   .page > header.has-image {
+    height: 30vh;
     background: transparent no-repeat center center / cover;
     color: #fff; }
     .page > header.has-image h1 {
@@ -351,7 +353,7 @@ ul.social li.social_item {
 
 /* By section */
 .blog .page > header {
-  color: #E08E79; }
+  color: #DD9C2C; }
   .blog .page > header.has-image {
     color: #fff; }
 
@@ -406,7 +408,7 @@ body.home .page section.slide {
 #blog {
   background-color: #FFFFFF; }
   #blog h1 {
-    color: #E08E79; }
+    color: #DD9C2C; }
   #blog .row {
     margin-top: 50px;
     margin-bottom: 50px; }
@@ -441,9 +443,9 @@ body.home .page section.slide {
         color: #ffffff;
         padding-left: 0; }
       #blog .post a.link:hover {
-        color: #d66b50; }
+        color: #b8801e; }
         #blog .post a.link:hover span {
-          color: #d66b50;
+          color: #b8801e;
           padding-left: 5px; }
 
 #hero {
@@ -571,13 +573,13 @@ body.home .page section.slide {
     background: #FFFFFF no-repeat scroll center center / contain;
     height: 300px; }
   .post-details .post a {
-    color: #E08E79; }
+    color: #DD9C2C; }
     .post-details .post a:hover {
-      color: #d66b50; }
+      color: #b8801e; }
     .post-details .post a:active {
-      color: #c54d2e; }
+      color: #8c6117; }
     .post-details .post a:focus {
-      color: #c54d2e; }
+      color: #8c6117; }
   .post-details .post p,
   .post-details .post pre,
   .post-details .post blockquote,
@@ -591,10 +593,10 @@ body.home .page section.slide {
   .post-list article .meta {
     margin: 10px 0; }
 .post-list .pagination > li > a {
-  color: #E08E79; }
+  color: #DD9C2C; }
 .post-list .pagination > .active > span {
-  border-color: #E08E79;
-  background-color: #E08E79; }
+  border-color: #DD9C2C;
+  background-color: #DD9C2C; }
 
 body.shuwee {
   background-color: #F9F9F9; }
