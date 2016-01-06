@@ -44,7 +44,7 @@ module.exports = function (grunt) {
                     outputStyle: 'nested',
                     sourcemap: true,
                     imagesDir: 'web/img',
-                    http_path: 'web',
+                    httpPath: 'web',
                     relativeAssets: true
                 }
             }
