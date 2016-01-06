@@ -2516,33 +2516,41 @@
                     "Wanjee\\Shuwee\\AdminBundle\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Wanjee\\Shuwee\\AdminBundle\\": "tests"
+                }
+            },
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Shuwee's tribe",
-                    "homepage": "https://github.com/wanjee/ShuweeAdminBundle/graphs/contributors"
-                },
-                {
                     "name": "Sébastien Piraux",
                     "email": "wanjee.be@gmail.com",
                     "homepage": "http://www.wanjee.be",
                     "role": "Developer"
+                },
+                {
+                    "name": "Shuwee's tribe",
+                    "homepage": "https://github.com/wanjee/ShuweeAdminBundle/graphs/contributors"
                 }
             ],
             "description": "Admin bundle for Symfony2.  Part of the Shuwee project",
             "homepage": "https://github.com/wanjee/ShuweeAdminBundle",
             "keywords": [
-                "Symfony2",
                 "Wanjee",
                 "admin",
                 "administration",
                 "backend",
                 "bundle",
-                "shuwee"
+                "shuwee",
+                "symfony2"
             ],
+            "support": {
+                "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/master",
+                "issues": "https://github.com/wanjee/ShuweeAdminBundle/issues"
+            },
             "time": "2016-01-05 20:09:05"
         },
         {
@@ -2579,7 +2587,11 @@
                     "Wanjee\\Shuwee\\ConfigBundle\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Wanjee\\Shuwee\\ConfigBundle\\": "tests"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -2598,14 +2610,18 @@
             "description": "Config bundle.  Part of the Shuwee project",
             "homepage": "https://github.com/wanjee/ShuweeConfigBundle",
             "keywords": [
-                "Symfony2",
                 "Wanjee",
                 "admin",
                 "administration",
                 "backend",
                 "bundle",
-                "shuwee"
+                "shuwee",
+                "symfony2"
             ],
+            "support": {
+                "source": "https://github.com/wanjee/ShuweeConfigBundle/tree/v1.0.0",
+                "issues": "https://github.com/wanjee/ShuweeConfigBundle/issues"
+            },
             "time": "2016-01-06 14:02:54"
         }
     ],
