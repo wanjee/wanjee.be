@@ -37,7 +37,7 @@ class PostController extends Controller
         );
 
         $response = $this->render(
-            'post/index.html.twig',
+            'post/list.html.twig',
             array(
                 'posts' => $paginatedPosts,
             )
