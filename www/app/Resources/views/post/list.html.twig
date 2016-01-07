@@ -26,7 +26,7 @@
         {% for post in posts %}
             {% set postUrl = path('post_details', {'slug': post.slug}) %}
             <div class="row">
-                <article class="post col-md-10 col-md-offset-1">
+                <article class="post col-md-8 col-md-offset-2">
                     <div class="img-container">
                         {% if post.webPath is not empty %}
                             <a href="{{ postUrl }}" style="background-image:url({{ post.webPath | imagine_filter('post_promoted') }});" ></a>
