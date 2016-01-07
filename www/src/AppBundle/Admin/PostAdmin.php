@@ -40,9 +40,9 @@ class PostAdmin extends Admin
     public function getDatagrid()
     {
         $datagrid = new Datagrid($this, array(
-                'limit_per_page' => 10,
-                'default_sort_column' => 'id',
-                'default_sort_order' => 'asc',
+                'limit_per_page' => 15,
+                'default_sort_column' => 'publishedAt',
+                'default_sort_order' => 'desc',
             )
         );
 
