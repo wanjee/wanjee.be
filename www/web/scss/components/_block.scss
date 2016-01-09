@@ -10,6 +10,10 @@
       &.no-figure {
         text-align: center;
       }
+
+      h2 {
+        margin-top: 0;
+      }
     }
 
     figure {
@@ -25,6 +29,18 @@
         font-size: 12px;
         text-align: center;
       }
+    }
+  }
+}
+
+/**
+ * Media queries
+ */
+@media (max-width: 992px) {
+  .row {
+    &.feature {
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
   }
 }

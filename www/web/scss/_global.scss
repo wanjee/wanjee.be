@@ -171,3 +171,17 @@ a {
     }
   }
 }
+
+
+
+/**
+ * Media queries
+ */
+@media (max-width: 768px) {
+  a {
+    &.btn {
+      display: block;
+      margin: 25px 0;
+    }
+  }
+}

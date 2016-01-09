@@ -125,6 +125,13 @@ a {
       color: #FFFFFF;
       background-color: #286461; }
 
+/**
+ * Media queries
+ */
+@media (max-width: 768px) {
+  a.btn {
+    display: block;
+    margin: 25px 0; } }
 /* Fonts */
 @font-face {
   font-family: 'icomoon';
@@ -186,6 +193,8 @@ a {
     text-align: left; }
     .row.feature .description.no-figure {
       text-align: center; }
+    .row.feature .description h2 {
+      margin-top: 0; }
   .row.feature figure img {
     max-width: 100%;
     height: auto;
@@ -196,6 +205,13 @@ a {
     font-size: 12px;
     text-align: center; }
 
+/**
+ * Media queries
+ */
+@media (max-width: 992px) {
+  .row.feature {
+    margin-top: 50px;
+    margin-bottom: 50px; } }
 .loader {
   width: 80px;
   height: 80px;
