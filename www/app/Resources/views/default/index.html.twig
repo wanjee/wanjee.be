@@ -63,7 +63,7 @@
             </div>
             <div id="post-promoted" class="row">
                 {% for post in posts %}
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 {% if loop.last %}hidden-md{% endif %}">
                         {% include 'post/teaser.html.twig' with {'post' : post} %}
                     </div>
                 {% endfor %}
