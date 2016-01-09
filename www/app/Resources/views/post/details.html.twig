@@ -10,7 +10,7 @@
     <meta property="og:description" content="{{ post.summary | e('html_attr') }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ url('post_details', {'slug': post.slug}) }}" />
-    <meta property="og:image" content="{{ absolute_url(asset(post.webPath)) }})" />
+    <meta property="og:image" content="{{ absolute_url(asset(post.webPath)) }}" />
     <meta property="article:published_time" content="{{ post.publishedAt | date('c') }}" />
     <meta property="article:author" content="Wanjee" />
 {% endblock %}
