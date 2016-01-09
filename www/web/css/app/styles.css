@@ -562,11 +562,12 @@ body.home .page section.slide {
     color: #45ADA8; }
 
 .post-details .inner-nav {
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 14px; }
 .post-details .post {
-  padding-top: 40px;
-  padding-bottom: 80px; }
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 40px; }
   .post-details .post h1 {
     display: none; }
   .post-details .post .img-container {

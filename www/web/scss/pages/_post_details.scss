@@ -1,13 +1,14 @@
 .post-details {
 
   .inner-nav {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 14px;
   }
 
   .post {
-    padding-top: 40px;
-    padding-bottom: 80px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 40px;
 
     h1 {
       display: none;
