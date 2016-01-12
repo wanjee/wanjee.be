@@ -586,10 +586,11 @@ body.home .page section.slide {
   margin-bottom: 40px; }
   .post-details .post h1 {
     display: none; }
+  .post-details .post .excerpt {
+    margin-bottom: 20px; }
   .post-details .post .img-container {
     background: #FFFFFF no-repeat scroll center center / contain;
-    height: 300px;
-    margin-top: 20px; }
+    height: 300px; }
   .post-details .post a {
     color: #DD9C2C; }
     .post-details .post a:hover {
