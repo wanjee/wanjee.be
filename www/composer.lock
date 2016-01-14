@@ -1341,16 +1341,16 @@
         },
         {
             "name": "liip/imagine-bundle",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "19eda155dd4dd71fa1428efcdebecbb9142b0388"
+                "reference": "22d625e92337c1c25338922dc08706182be9b02f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/19eda155dd4dd71fa1428efcdebecbb9142b0388",
-                "reference": "19eda155dd4dd71fa1428efcdebecbb9142b0388",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/22d625e92337c1c25338922dc08706182be9b02f",
+                "reference": "22d625e92337c1c25338922dc08706182be9b02f",
                 "shasum": ""
             },
             "require": {
@@ -1380,6 +1380,7 @@
             "suggest": {
                 "amazonwebservices/aws-sdk-for-php": "Add it if you'd like to use aws v1 resolver",
                 "aws/aws-sdk-php": "Add it if you'd like to use aws v2 or v3 resolver",
+                "league/flysystem": "If you'd want to use Flysystem binary loader",
                 "monolog/monolog": "If you'd want to write logs",
                 "twig/twig": "If you'd want to use some handy twig filters, version 1.12 or greater required"
             },
@@ -1410,7 +1411,7 @@
                 "image",
                 "imagine"
             ],
-            "time": "2015-12-29 09:47:49"
+            "time": "2016-01-14 07:16:25"
         },
         {
             "name": "monolog/monolog",
@@ -2182,16 +2183,16 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.3.9",
+            "version": "v2.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/swiftmailer-bundle.git",
-                "reference": "3d21ada19f23631f558ad6df653b168e35362e78"
+                "reference": "de5a2ddcaf91d2e44c19161e0fe8ed88022ceb51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/3d21ada19f23631f558ad6df653b168e35362e78",
-                "reference": "3d21ada19f23631f558ad6df653b168e35362e78",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/de5a2ddcaf91d2e44c19161e0fe8ed88022ceb51",
+                "reference": "de5a2ddcaf91d2e44c19161e0fe8ed88022ceb51",
                 "shasum": ""
             },
             "require": {
@@ -2235,7 +2236,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2015-11-28 10:59:29"
+            "time": "2016-01-14 10:25:38"
         },
         {
             "name": "symfony/symfony",
@@ -2420,16 +2421,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.23.1",
+            "version": "v1.23.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "d9b6333ae8dd2c8e3fd256e127548def0bc614c6"
+                "reference": "ae53fc2c312fdee63773b75cb570304f85388b08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d9b6333ae8dd2c8e3fd256e127548def0bc614c6",
-                "reference": "d9b6333ae8dd2c8e3fd256e127548def0bc614c6",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ae53fc2c312fdee63773b75cb570304f85388b08",
+                "reference": "ae53fc2c312fdee63773b75cb570304f85388b08",
                 "shasum": ""
             },
             "require": {
@@ -2477,20 +2478,20 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-11-05 12:49:06"
+            "time": "2016-01-11 14:02:19"
         },
         {
             "name": "wanjee/shuwee-admin-bundle",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeAdminBundle.git",
-                "reference": "55b46ac296f6bd2237fbf1048d8ac84e0e07ec30"
+                "reference": "0d01a08f3bf44d30f7449a403e7c1c69c793b63d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/55b46ac296f6bd2237fbf1048d8ac84e0e07ec30",
-                "reference": "55b46ac296f6bd2237fbf1048d8ac84e0e07ec30",
+                "url": "https://api.github.com/repos/wanjee/ShuweeAdminBundle/zipball/0d01a08f3bf44d30f7449a403e7c1c69c793b63d",
+                "reference": "0d01a08f3bf44d30f7449a403e7c1c69c793b63d",
                 "shasum": ""
             },
             "require": {
@@ -2517,55 +2518,47 @@
                     "Wanjee\\Shuwee\\AdminBundle\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Wanjee\\Shuwee\\AdminBundle\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
+                    "name": "Shuwee's tribe",
+                    "homepage": "https://github.com/wanjee/ShuweeAdminBundle/graphs/contributors"
+                },
+                {
                     "name": "Sébastien Piraux",
                     "email": "wanjee.be@gmail.com",
                     "homepage": "http://www.wanjee.be",
                     "role": "Developer"
-                },
-                {
-                    "name": "Shuwee's tribe",
-                    "homepage": "https://github.com/wanjee/ShuweeAdminBundle/graphs/contributors"
                 }
             ],
             "description": "Admin bundle for Symfony2.  Part of the Shuwee project",
             "homepage": "https://github.com/wanjee/ShuweeAdminBundle",
             "keywords": [
+                "Symfony2",
                 "Wanjee",
                 "admin",
                 "administration",
                 "backend",
                 "bundle",
-                "shuwee",
-                "symfony2"
+                "shuwee"
             ],
-            "support": {
-                "source": "https://github.com/wanjee/ShuweeAdminBundle/tree/master",
-                "issues": "https://github.com/wanjee/ShuweeAdminBundle/issues"
-            },
-            "time": "2016-01-05 20:09:05"
+            "time": "2016-01-14 18:41:26"
         },
         {
             "name": "wanjee/shuwee-config-bundle",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wanjee/ShuweeConfigBundle.git",
-                "reference": "29ef4e3f11a21e2d4f5c87f97f97623de846b511"
+                "reference": "0dea96fdbbba44801305182d482ec68e5287e1e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wanjee/ShuweeConfigBundle/zipball/29ef4e3f11a21e2d4f5c87f97f97623de846b511",
-                "reference": "29ef4e3f11a21e2d4f5c87f97f97623de846b511",
+                "url": "https://api.github.com/repos/wanjee/ShuweeConfigBundle/zipball/0dea96fdbbba44801305182d482ec68e5287e1e3",
+                "reference": "0dea96fdbbba44801305182d482ec68e5287e1e3",
                 "shasum": ""
             },
             "require": {
@@ -2588,11 +2581,7 @@
                     "Wanjee\\Shuwee\\ConfigBundle\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Wanjee\\Shuwee\\ConfigBundle\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2611,19 +2600,15 @@
             "description": "Config bundle.  Part of the Shuwee project",
             "homepage": "https://github.com/wanjee/ShuweeConfigBundle",
             "keywords": [
+                "Symfony2",
                 "Wanjee",
                 "admin",
                 "administration",
                 "backend",
                 "bundle",
-                "shuwee",
-                "symfony2"
+                "shuwee"
             ],
-            "support": {
-                "source": "https://github.com/wanjee/ShuweeConfigBundle/tree/v1.0.0",
-                "issues": "https://github.com/wanjee/ShuweeConfigBundle/issues"
-            },
-            "time": "2016-01-06 14:02:54"
+            "time": "2016-01-13 09:46:23"
         }
     ],
     "packages-dev": [
@@ -2681,16 +2666,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.1",
+            "version": "v2.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "2deb2ccbe184948ae4e85e7b99e962738d3d2d69"
+                "reference": "855dc0e829fad123966347612b4183e307338c11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/2deb2ccbe184948ae4e85e7b99e962738d3d2d69",
-                "reference": "2deb2ccbe184948ae4e85e7b99e962738d3d2d69",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/855dc0e829fad123966347612b4183e307338c11",
+                "reference": "855dc0e829fad123966347612b4183e307338c11",
                 "shasum": ""
             },
             "require": {
@@ -2732,7 +2717,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2015-12-11 08:57:52"
+            "time": "2016-01-06 09:59:23"
         }
     ],
     "aliases": [],
