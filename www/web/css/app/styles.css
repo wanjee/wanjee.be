@@ -132,6 +132,7 @@ a {
   a.btn {
     display: block;
     margin: 25px 0; } }
+
 /* Fonts */
 @font-face {
   font-family: 'icomoon';
@@ -139,6 +140,7 @@ a {
   src: url("../fonts/icomoon.eot?qkhto4#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?qkhto4") format("truetype"), url("../fonts/icomoon.woff?qkhto4") format("woff"), url("../fonts/icomoon.svg?qkhto4#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -212,6 +214,7 @@ a {
   .row.feature {
     margin-top: 50px;
     margin-bottom: 50px; } }
+
 .loader {
   width: 80px;
   height: 80px;
@@ -264,6 +267,7 @@ a {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     opacity: 0; } }
+
 @keyframes sk-scaleout {
   0% {
     -webkit-transform: scale(0);
@@ -278,6 +282,7 @@ a {
     -o-transform: scale(1);
     transform: scale(1);
     opacity: 0; } }
+
 nav.navbar {
   transition: all 0.2s ease-in-out 0s;
   background-color: rgba(0, 0, 0, 0.65); }
@@ -287,19 +292,23 @@ nav.navbar {
       display: none; }
   nav.navbar.nav-hidden {
     top: -55px; }
+
 nav .navbar-toggle .icon-bar {
   background-color: #888; }
+
 nav .navbar-brand {
   font-weight: 500;
   color: #efefef;
   padding: 10px 15px; }
   nav .navbar-brand img {
     max-height: 100%; }
+
 nav .nav > li > a {
   transition: none;
   color: #fff; }
   nav .nav > li > a:hover, nav .nav > li > a:focus {
     background-color: transparent; }
+
 nav .nav > li.active > a {
   font-weight: 700;
   color: #fff;
@@ -399,8 +408,10 @@ body > footer {
 /* Pages */
 body.home .page h1 {
   text-align: center; }
+
 body.home .page .lead {
   text-align: center; }
+
 body.home .page section.slide {
   padding-top: 80px;
   padding-bottom: 80px; }
@@ -525,14 +536,17 @@ body.home .page section.slide {
 #hero a.btn {
   opacity: 0;
   animation-fill-mode: forwards; }
+
 #hero h1 {
   animation-name: bounce-right;
   animation-duration: 0.6s;
   animation-delay: 0.3s; }
+
 #hero h2 {
   animation-name: bounce-left;
   animation-duration: 0.6s;
   animation-delay: 0.3s; }
+
 #hero a.btn {
   animation-name: btn-fade;
   animation-duration: 0.6s;
@@ -548,6 +562,7 @@ body.home .page section.slide {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
 @keyframes bounce-left {
   0% {
     opacity: .2;
@@ -558,17 +573,20 @@ body.home .page section.slide {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
 @keyframes btn-fade {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
 @keyframes scroll {
   0% {
     opacity: 1; }
   100% {
     opacity: 0;
     transform: translateY(46px); } }
+
 #simplicity {
   background-color: #FFFFFF; }
 
@@ -580,6 +598,7 @@ body.home .page section.slide {
 .post-details .inner-nav {
   margin-top: 20px;
   font-size: 14px; }
+
 .post-details .post {
   overflow: hidden;
   margin-top: 20px;
@@ -607,12 +626,15 @@ body.home .page section.slide {
 
 .post-list section.container {
   padding-top: 40px; }
+
 .post-list article {
   margin-bottom: 40px; }
   .post-list article .meta {
     margin: 10px 0; }
+
 .post-list .pagination > li > a {
   color: #DD9C2C; }
+
 .post-list .pagination > .active > span {
   border-color: #DD9C2C;
   background-color: #DD9C2C; }

@@ -3,7 +3,7 @@
 module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -34,18 +34,15 @@ module.exports = function (grunt) {
                 }
             }
         },
-        compass: {
+        sass: {
+            options: {
+                sourceMap: true
+            },
             app: {
-                options: {
-                    sassDir: 'web/scss',
-                    cssDir: 'web/css/app',
-                    environment: 'development',
-                    noLineComments: true,
-                    outputStyle: 'nested',
-                    sourcemap: true,
-                    imagesDir: 'web/img',
-                    httpPath: 'web',
-                    relativeAssets: true
+                files: {
+                    'web/css/app/styles.css': [
+                        'web/scss/styles.scss'
+                    ]
                 }
             }
         },
@@ -79,7 +76,7 @@ module.exports = function (grunt) {
         'watch': {
             styles: {
                 files: 'web/scss/**/*.scss',
-                tasks: ['compass','cssmin:app'],
+                tasks: ['sass','cssmin:app'],
                 options: {
                     debounceDelay: 250
                 }
@@ -100,7 +97,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('dist', [
-        'compass',
+        'sass',
         'cssmin',
         'uglify'
     ]);
