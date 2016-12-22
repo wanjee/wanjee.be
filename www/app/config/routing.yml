@@ -5,9 +5,6 @@ shuwee_admin:
     resource: "@ShuweeAdminBundle/Resources/config/routing.yml"
     prefix: /admin
 
-shuwee_config:
-    resource: "@ShuweeConfigBundle/Resources/config/routing.yml"
-
 app:
     resource: "@AppBundle/Controller/"
     type: annotation

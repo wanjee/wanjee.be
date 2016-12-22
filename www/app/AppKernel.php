@@ -20,7 +20,6 @@ class AppKernel extends Kernel
             new Liip\ImagineBundle\LiipImagineBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Wanjee\Shuwee\AdminBundle\ShuweeAdminBundle(),
-            new Wanjee\Shuwee\ConfigBundle\ShuweeConfigBundle(),
             new AppBundle\AppBundle(),
         );
 
