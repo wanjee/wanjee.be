@@ -1,9 +1,16 @@
 <?php
 namespace AppBundle\Admin;
 
-use Symfony\Bundle\FrameworkBundle\Routing\Router;
+use AppBundle\Entity\Block;
+use AppBundle\Form\Type\BlockType;
 use Wanjee\Shuwee\AdminBundle\Admin\Admin;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Datagrid;
+use Wanjee\Shuwee\AdminBundle\Datagrid\DatagridInterface;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeBoolean;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeImage;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeText;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Filter\Type\DatagridFilterTypeChoice;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Filter\Type\DatagridFilterTypeText;
 
 /**
  * Class BlockAdmin
@@ -12,17 +19,6 @@ use Wanjee\Shuwee\AdminBundle\Datagrid\Datagrid;
  */
 class BlockAdmin extends Admin
 {
-    private $router;
-
-    /**
-     *
-     */
-    function __construct(Router $router)
-    {
-        parent::__construct();
-        $this->router = $router;
-    }
-
     /**
      * Return the main admin form for this content.
      *
@@ -31,67 +27,7 @@ class BlockAdmin extends Admin
     public function getForm()
     {
         // Must return a fully qualified class name
-        return 'AppBundle\Form\Type\BlockType';
-    }
-
-    /**
-     * @return Datagrid
-     */
-    public function getDatagrid()
-    {
-        $datagrid = new Datagrid($this, array(
-                'limit_per_page' => 10,
-                'default_sort_column' => 'id',
-                'default_sort_order' => 'asc',
-            )
-        );
-
-        $datagrid
-            ->addField(
-                'id',
-                'text',
-                array(
-                    'label' => '#',
-                    'sortable' => true,
-                )
-            )
-            ->addField(
-                'image',
-                'image',
-                array(
-                    'label' => 'Image',
-                    'base_path' => 'uploads/blocks'
-                )
-            )
-            ->addField(
-                'title',
-                'text',
-                array(
-                    'label' => 'Title',
-                    'sortable' => true,
-                )
-            )
-            ->addField(
-                'status',
-                'boolean',
-                array(
-                    'label' => 'Published',
-                    'sortable' => true,
-                    'label_true' => 'Published',
-                    'label_false' => 'Unpublished',
-                )
-            )
-            ->addField(
-                'promoted',
-                'boolean',
-                array(
-                    'label' => 'Promoted',
-                    'sortable' => true,
-                )
-            )
-        ;
-
-        return $datagrid;
+        return BlockType::class;
     }
 
     /**
@@ -99,14 +35,119 @@ class BlockAdmin extends Admin
      */
     public function getEntityClass()
     {
-        return 'AppBundle\Entity\Block';
+        return Block::class;
     }
 
     /**
-     * @return string
+     * @return array Options
      */
-    public function getLabel()
+    public function getOptions() {
+        return array(
+            'label' => '{0} Blocks|{1} Block|]1,Inf] Blocks',
+            'menu_section' => 'Content',
+        );
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getDatagridOptions()
     {
-        return '{0} Blocks|{1} Block|]1,Inf] Blocks';
+        return [
+            'limit_per_page' => 25,
+            'default_sort_column' => 'id',
+            'default_sort_order' => 'asc',
+            'show_actions_column' => true,
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attachFields(DatagridInterface $datagrid)
+    {
+        $datagrid
+            ->addField(
+                'id',
+                DatagridFieldTypeText::class,
+                array(
+                    'label' => '#',
+                    'sortable' => true,
+                )
+            )
+            ->addField(
+                'image',
+                DatagridFieldTypeImage::class,
+                array(
+                    'label' => 'Image',
+                    'base_path' => 'uploads/blocks'
+                )
+            )
+            ->addField(
+                'title',
+                DatagridFieldTypeText::class,
+                array(
+                    'label' => 'Title',
+                    'sortable' => true,
+                )
+            )
+            ->addField(
+                'status',
+                DatagridFieldTypeBoolean::class,
+                array(
+                    'label' => 'Published',
+                    'sortable' => true,
+                    'label_true' => 'Yes',
+                    'label_false' => 'No',
+                    'toggle' => true,
+                )
+            )
+            ->addField(
+                'promoted',
+                DatagridFieldTypeBoolean::class,
+                array(
+                    'label' => 'Promoted',
+                    'sortable' => true,
+                    'toggle' => true,
+                )
+            )
+        ;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attachFilters(DatagridInterface $datagrid)
+    {
+        $datagrid
+            ->addFilter(
+                'title',
+                DatagridFilterTypeText::class,
+                [
+                    'label' => 'Title',
+                ]
+            )
+            ->addFilter(
+                'status',
+                DatagridFilterTypeChoice::class,
+                [
+                    'label' => 'Published',
+                    'choices' => [
+                        'Yes' => 1,
+                        'No' => 0,
+                    ],
+                ]
+            )
+            ->addFilter(
+                'promoted',
+                DatagridFilterTypeChoice::class,
+                [
+                    'label' => 'Promoted',
+                    'choices' => [
+                        'Yes' => 1,
+                        'No' => 0,
+                    ],
+                ]
+            );
     }
 }

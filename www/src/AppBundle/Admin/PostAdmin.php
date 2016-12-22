@@ -1,9 +1,17 @@
 <?php
 namespace AppBundle\Admin;
 
+use AppBundle\Entity\Post;
+use AppBundle\Form\Type\PostType;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 use Wanjee\Shuwee\AdminBundle\Admin\Admin;
-use Wanjee\Shuwee\AdminBundle\Datagrid\Datagrid;
+use Wanjee\Shuwee\AdminBundle\Datagrid\DatagridInterface;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeBoolean;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeDate;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeImage;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeText;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Filter\Type\DatagridFilterTypeChoice;
+use Wanjee\Shuwee\AdminBundle\Datagrid\Filter\Type\DatagridFilterTypeText;
 
 /**
  * Class PostAdmin
@@ -19,7 +27,6 @@ class PostAdmin extends Admin
      */
     function __construct(Router $router)
     {
-        parent::__construct();
         $this->router = $router;
     }
 
@@ -31,25 +38,54 @@ class PostAdmin extends Admin
     public function getForm()
     {
         // Must return a fully qualified class name
-        return 'AppBundle\Form\Type\PostType';
+        return PostType::class;
     }
 
     /**
-     * @return Datagrid
+     * @return string
      */
-    public function getDatagrid()
+    public function getEntityClass()
     {
-        $datagrid = new Datagrid($this, array(
-                'limit_per_page' => 15,
-                'default_sort_column' => 'publishedAt',
-                'default_sort_order' => 'desc',
-            )
-        );
+        return Post::class;
+    }
 
+    /**
+     * @return array Options
+     */
+    public function getOptions() {
+        return array(
+            'label' => '{0} Posts|{1} Post|]1,Inf] Posts',
+            'description' => 'A blog post is a journal entry.',
+            'menu_section' => 'Content',
+            'preview_url_callback' => function ($entity) {
+                return $this->router->generate('post_details', array('slug' => $entity->getSlug()));
+            },
+        );
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getDatagridOptions()
+    {
+        return [
+            'limit_per_page' => 25,
+            'default_sort_column' => 'id',
+            'default_sort_order' => 'asc',
+            'show_actions_column' => true,
+        ];
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function attachFields(DatagridInterface $datagrid)
+    {
         $datagrid
             ->addField(
                 'id',
-                'text',
+                DatagridFieldTypeText::class,
                 array(
                     'label' => '#',
                     'sortable' => true,
@@ -57,7 +93,7 @@ class PostAdmin extends Admin
             )
             ->addField(
                 'image',
-                'image',
+                DatagridFieldTypeImage::class,
                 array(
                     'label' => 'Image',
                     'base_path' => 'uploads/posts'
@@ -65,7 +101,7 @@ class PostAdmin extends Admin
             )
             ->addField(
                 'title',
-                'text',
+                DatagridFieldTypeText::class,
                 array(
                     'label' => 'Title',
                     'sortable' => true,
@@ -73,21 +109,22 @@ class PostAdmin extends Admin
             )
             ->addField(
                 'publishedAt',
-                'date',
+                DatagridFieldTypeDate::class,
                 array(
-                    'label' => 'Published',
+                    'label' => 'Publication date',
                     'sortable' => true,
                     'date_format' => 'd/m/Y',
                 )
             )
             ->addField(
                 'status',
-                'boolean',
+                DatagridFieldTypeBoolean::class,
                 array(
                     'label' => 'Published',
                     'sortable' => true,
-                    'label_true' => 'Published',
-                    'label_false' => 'Unpublished',
+                    'label_true' => 'Yes',
+                    'label_false' => 'No',
+                    'toggle' => true,
                 )
             )
         ;
@@ -96,29 +133,28 @@ class PostAdmin extends Admin
     }
 
     /**
-     * @return string
+     * @inheritdoc
      */
-    public function getEntityClass()
+    public function attachFilters(DatagridInterface $datagrid)
     {
-        return 'AppBundle\Entity\Post';
-    }
-
-    /**
-     * @return string
-     */
-    public function getLabel()
-    {
-        return '{0} Posts|{1} Post|]1,Inf] Posts';
-    }
-
-    /**
-     * @return array Options
-     */
-    public function getOptions() {
-        return array(
-            'preview_url_callback' => function ($entity) {
-                return $this->router->generate('post_details', array('slug' => $entity->getSlug()));
-            },
-        );
+        $datagrid
+            ->addFilter(
+                'title',
+                DatagridFilterTypeText::class,
+                [
+                    'label' => 'Title',
+                ]
+            )
+            ->addFilter(
+                'status',
+                DatagridFilterTypeChoice::class,
+                [
+                    'label' => 'Published',
+                    'choices' => [
+                        'Yes' => 1,
+                        'No' => 0,
+                    ],
+                ]
+            );
     }
 }
