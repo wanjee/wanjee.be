@@ -4,6 +4,26 @@ parameters:
 #    parameter_name: value
 
 services:
+    appbundle.post_admin:
+        class: AppBundle\Admin\PostAdmin
+        arguments: ['@router']
+        parent: shuwee_admin.admin_abstract
+        tags:
+          -  { name: shuwee.admin }
+
+    appbundle.block_admin:
+        class: AppBundle\Admin\BlockAdmin
+        parent: shuwee_admin.admin_abstract
+        tags:
+          -  { name: shuwee.admin }
+
+    appbundle.twig.app_extension:
+        class:     AppBundle\Twig\AppExtension
+        arguments: ['@markdown']
+        public:    false
+        tags:
+          - { name: twig.extension }
+
     markdown:
         class: AppBundle\Utils\Markdown
 
