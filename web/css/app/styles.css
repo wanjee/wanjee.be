@@ -446,34 +446,28 @@ body.home .page section.slide {
     border-radius: 4px;
     text-align: left;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.08); }
-    #blog .post .img-container a {
-      height: 200px;
-      width: 100%;
-      display: block;
-      background-color: #efefef;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat; }
     #blog .post .meta {
       padding: 15px;
-      text-align: right; }
+      margin: 0; }
+      #blog .post .meta > div {
+        padding: 0; }
+        #blog .post .meta > div.read-more {
+          text-align: right; }
+          #blog .post .meta > div.read-more a.link {
+            font-size: 14px; }
+            #blog .post .meta > div.read-more a.link span {
+              transition: all 0.3s ease-in-out 0s;
+              color: #ffffff;
+              padding-left: 0; }
+            #blog .post .meta > div.read-more a.link:hover {
+              color: #b8801e; }
+              #blog .post .meta > div.read-more a.link:hover span {
+                color: #b8801e;
+                padding-left: 5px; }
     #blog .post .copy-container {
       padding: 0 15px 15px 15px; }
       #blog .post .copy-container .excerpt {
         min-height: 100px; }
-    #blog .post a.link {
-      display: block;
-      padding: 15px;
-      font-size: 14px; }
-      #blog .post a.link span {
-        transition: all 0.3s ease-in-out 0s;
-        color: #ffffff;
-        padding-left: 0; }
-      #blog .post a.link:hover {
-        color: #b8801e; }
-        #blog .post a.link:hover span {
-          color: #b8801e;
-          padding-left: 5px; }
 
 #hero {
   height: 100vh;
