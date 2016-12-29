@@ -59,7 +59,6 @@ class BlockAdmin extends Admin
     public function getOptions() {
         return array(
             'label' => '{0} Blocks|{1} Block|]1,Inf] Blocks',
-            'menu_section' => 'Content',
         );
     }
 

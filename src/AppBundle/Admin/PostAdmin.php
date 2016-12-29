@@ -67,7 +67,6 @@ class PostAdmin extends Admin
         return array(
             'label' => '{0} Posts|{1} Post|]1,Inf] Posts',
             'description' => 'A blog post is a journal entry.',
-            'menu_section' => 'Content',
             'preview_url_callback' => function ($entity) {
                 return $this->router->generate('post_details', array('slug' => $entity->getSlug()));
             },
