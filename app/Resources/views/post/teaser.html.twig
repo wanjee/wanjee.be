@@ -1,17 +1,6 @@
 {% set postUrl = path('post_details', {'slug': post.slug}) %}
 
 <article class="post teaser">
-    <div class="meta">
-        <time datetime="{{ post.publishedAt | date('c') }}">{{ post.publishedAt | date('F j, Y') }}</time>
-    </div>
-
-    <div class="img-container">
-        {% if post.webPath is not empty %}
-            <a href="{{ postUrl }}" style="background-image:url({{ post.webPath | imagine_filter('post_promoted') }});" ></a>
-        {% else %}
-            <a href="{{ postUrl }}"></a>
-        {% endif %}
-    </div>
 
     <div class="copy-container">
         <div class="copy">
@@ -22,5 +11,14 @@
             </div>
         </div>
     </div>
-    <a href="{{ postUrl }}" class="link link-blog text-right">Read more <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+
+    <div class="meta row">
+        <div class="col-xs-6 time">
+            <time datetime="{{ post.publishedAt | date('c') }}">{{ post.publishedAt | date('F j, Y') }}</time>
+        </div>
+        <div class="col-xs-6 read-more">
+            <a href="{{ postUrl }}" class="link link-blog text-right">Read more <span
+                        class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+        </div>
+    </div>
 </article>
