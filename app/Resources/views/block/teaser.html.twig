@@ -1,11 +1,11 @@
 <div class="row feature">
-    {% if block.webPath is not empty %}
+    {% if block.image is not empty %}
         <div class="col-xs-12 col-md-6 description{% if text_position == 'right' %} col-md-push-6 {% endif %}">
             <h2>{{ block.title }}</h2>
             {{ block.content | md2html }}
         </div>
         <figure class="col-xs-12 col-md-6{% if text_position == 'right' %} col-md-pull-6 {% endif %}">
-            <img src="{{ block.webPath | imagine_filter('block_figure') }}">
+            <img src="{{ block.image | imagine_filter('block_figure') }}">
             <figcaption class="figure-caption">{{ block.caption }}</figcaption>
         </figure>
     {% else %}

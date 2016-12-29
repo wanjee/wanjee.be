@@ -28,8 +28,8 @@
             <div class="row">
                 <article class="post col-md-8 col-md-offset-2">
                     <div class="img-container">
-                        {% if post.webPath is not empty %}
-                            <a href="{{ postUrl }}" style="background-image:url({{ post.webPath | imagine_filter('post_promoted') }});" ></a>
+                        {% if post.image is not empty %}
+                            <a href="{{ postUrl }}" style="background-image:url({{ post.image | imagine_filter('post_promoted') }});" ></a>
                         {% else %}
                             <a href="{{ postUrl }}"></a>
                         {% endif %}

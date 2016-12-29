@@ -3,6 +3,8 @@ namespace AppBundle\Admin;
 
 use AppBundle\Entity\Block;
 use AppBundle\Form\Type\BlockType;
+use Stof\DoctrineExtensionsBundle\Uploadable\UploadableManager;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Wanjee\Shuwee\AdminBundle\Admin\Admin;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Datagrid;
 use Wanjee\Shuwee\AdminBundle\Datagrid\DatagridInterface;
@@ -19,6 +21,19 @@ use Wanjee\Shuwee\AdminBundle\Datagrid\Filter\Type\DatagridFilterTypeText;
  */
 class BlockAdmin extends Admin
 {
+    /**
+     * @var \Stof\DoctrineExtensionsBundle\Uploadable\UploadableManager
+     */
+    private $uploadableManager;
+
+    /**
+     *
+     */
+    function __construct(UploadableManager $uploadableManager)
+    {
+        $this->uploadableManager = $uploadableManager;
+    }
+
     /**
      * Return the main admin form for this content.
      *
@@ -80,7 +95,7 @@ class BlockAdmin extends Admin
                 DatagridFieldTypeImage::class,
                 array(
                     'label' => 'Image',
-                    'base_path' => 'uploads/blocks'
+                    'base_path' => ''
                 )
             )
             ->addField(
@@ -149,5 +164,31 @@ class BlockAdmin extends Admin
                     ],
                 ]
             );
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function postUpdate($entity)
+    {
+        if ($entity->getImage() instanceof UploadedFile) {
+            $this->uploadableManager->markEntityToUpload(
+                $entity,
+                $entity->getImage()
+            );
+        }
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function postPersist($entity)
+    {
+        if ($entity->getImage() instanceof UploadedFile) {
+            $this->uploadableManager->markEntityToUpload(
+                $entity,
+                $entity->getImage()
+            );
+        }
     }
 }

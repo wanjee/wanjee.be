@@ -4,6 +4,8 @@ namespace AppBundle\Admin;
 use AppBundle\Entity\Post;
 use AppBundle\Form\Type\PostType;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
+use Stof\DoctrineExtensionsBundle\Uploadable\UploadableManager;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Wanjee\Shuwee\AdminBundle\Admin\Admin;
 use Wanjee\Shuwee\AdminBundle\Datagrid\DatagridInterface;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeBoolean;
@@ -20,14 +22,23 @@ use Wanjee\Shuwee\AdminBundle\Datagrid\Filter\Type\DatagridFilterTypeText;
  */
 class PostAdmin extends Admin
 {
+    /**
+     * @var \Stof\DoctrineExtensionsBundle\Uploadable\UploadableManager
+     */
+    private $uploadableManager;
+
+    /**
+     * @var Router
+     */
     private $router;
 
     /**
      *
      */
-    function __construct(Router $router)
+    function __construct(Router $router, UploadableManager $uploadableManager)
     {
         $this->router = $router;
+        $this->uploadableManager = $uploadableManager;
     }
 
     /**
@@ -96,7 +107,7 @@ class PostAdmin extends Admin
                 DatagridFieldTypeImage::class,
                 array(
                     'label' => 'Image',
-                    'base_path' => 'uploads/posts'
+                    'base_path' => ''
                 )
             )
             ->addField(
@@ -156,5 +167,31 @@ class PostAdmin extends Admin
                     ],
                 ]
             );
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function postUpdate($entity)
+    {
+        if ($entity->getImage() instanceof UploadedFile) {
+            $this->uploadableManager->markEntityToUpload(
+                $entity,
+                $entity->getImage()
+            );
+        }
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function postPersist($entity)
+    {
+        if ($entity->getImage() instanceof UploadedFile) {
+            $this->uploadableManager->markEntityToUpload(
+                $entity,
+                $entity->getImage()
+            );
+        }
     }
 }

@@ -6,13 +6,14 @@ parameters:
 services:
     appbundle.post_admin:
         class: AppBundle\Admin\PostAdmin
-        arguments: ['@router']
+        arguments: ['@router', '@stof_doctrine_extensions.uploadable.manager']
         parent: shuwee_admin.admin_abstract
         tags:
           -  { name: shuwee.admin }
 
     appbundle.block_admin:
         class: AppBundle\Admin\BlockAdmin
+        arguments: ['@stof_doctrine_extensions.uploadable.manager']
         parent: shuwee_admin.admin_abstract
         tags:
           -  { name: shuwee.admin }

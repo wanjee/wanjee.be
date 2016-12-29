@@ -99,4 +99,6 @@ knp_paginator:
 stof_doctrine_extensions:
     orm:
         default:
-            sluggable:   true
+            sluggable: true
+            uploadable: true
+            timestampable: true

@@ -35,12 +35,13 @@ class BlockType extends AbstractType
                 )
             )
             ->add(
-                'file',
+                'image',
                 FileType::class,
                 array(
                     'label' => 'Image',
                     'required' => false,
-                    'preview_base_path' => 'WebPath',
+                    'data_class' => null,
+                    'preview_base_path' => 'image',
                     'group' => 'Media',
                 )
             )
