@@ -18,6 +18,13 @@ services:
         tags:
           -  { name: shuwee.admin }
 
+    app.page_admin:
+        class: AppBundle\Admin\PageAdmin
+        parent: shuwee_admin.admin_abstract
+        arguments: ['@stof_doctrine_extensions.uploadable.manager', '@doctrine.orm.entity_manager', '@router']
+        tags:
+          -  { name: shuwee.admin }
+
     appbundle.twig.app_extension:
         class:     AppBundle\Twig\AppExtension
         arguments: ['@markdown']
