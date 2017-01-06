@@ -18,6 +18,12 @@ services:
         tags:
           -  { name: shuwee.admin }
 
+    appbundle.shuwee_user_admin:
+        class: AppBundle\Admin\ShuweeUserAdmin
+        parent: shuwee_admin.user_admin_abstract
+        tags:
+          -  { name: shuwee.admin }
+
     appbundle.twig.app_extension:
         class:     AppBundle\Twig\AppExtension
         arguments: ['@markdown']
