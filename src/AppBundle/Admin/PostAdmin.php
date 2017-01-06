@@ -6,7 +6,7 @@ use AppBundle\Form\Type\PostType;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 use Stof\DoctrineExtensionsBundle\Uploadable\UploadableManager;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Wanjee\Shuwee\AdminBundle\Admin\Admin;
+use Wanjee\Shuwee\AdminBundle\Admin\AbstractAdmin;
 use Wanjee\Shuwee\AdminBundle\Datagrid\DatagridInterface;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeBoolean;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeDate;
@@ -20,7 +20,7 @@ use Wanjee\Shuwee\AdminBundle\Datagrid\Filter\Type\DatagridFilterTypeText;
  *
  * @package AppBundle\Admin
  */
-class PostAdmin extends Admin
+class PostAdmin extends AbstractAdmin
 {
     /**
      * @var \Stof\DoctrineExtensionsBundle\Uploadable\UploadableManager

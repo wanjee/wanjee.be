@@ -5,21 +5,24 @@ use AppBundle\Entity\Block;
 use AppBundle\Form\Type\BlockType;
 use Stof\DoctrineExtensionsBundle\Uploadable\UploadableManager;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Wanjee\Shuwee\AdminBundle\Admin\Admin;
-use Wanjee\Shuwee\AdminBundle\Datagrid\Datagrid;
+use Wanjee\Shuwee\AdminBundle\Admin\AbstractAdmin;
 use Wanjee\Shuwee\AdminBundle\Datagrid\DatagridInterface;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeBoolean;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeImage;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Field\Type\DatagridFieldTypeText;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Filter\Type\DatagridFilterTypeChoice;
 use Wanjee\Shuwee\AdminBundle\Datagrid\Filter\Type\DatagridFilterTypeText;
+use Wanjee\Shuwee\AdminBundle\Annotation as Shuwee;
+
 
 /**
  * Class BlockAdmin
  *
  * @package AppBundle\Admin
+ *
+ * @Shuwee\Admin
  */
-class BlockAdmin extends Admin
+class BlockAdmin extends AbstractAdmin
 {
     /**
      * @var \Stof\DoctrineExtensionsBundle\Uploadable\UploadableManager
