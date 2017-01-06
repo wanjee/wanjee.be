@@ -29,5 +29,5 @@ security:
             - { path: ^/admin, role: ROLE_ADMIN }
 
     role_hierarchy:
-        ROLE_ADMIN:       [ROLE_USER, ROLE_PARAMETER_EDITOR]
-        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_PARAMETER_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_ADMIN:       [ROLE_USER]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
